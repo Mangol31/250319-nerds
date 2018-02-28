@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Антон Голованов](https://up.htmlacademy.ru/htmlcss/20/user/250319).
-* Наставник: `Неизвестно`.
+* Наставник: [Константин Мочульский] (https://htmlacademy.ru/profile/mkostiantyn).
 
 ---
 
