@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Нёрдс: Учебный проект Голованов А.</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="main-header">
+  <nav class="main-nav">
+    <a class="main-nav__logo">
+      <img src="img/logo.png" width="160" height="65" alt="Логотип Nёrds">
+    </a>
+    <ul>
+      <li><a class="main-nav__item" href="#">Студия</a></li>
+      <li><a class="main-nav__item" href="#">Клиенты</a></li>
+      <li><a class="main-nav__item main-nav__item--active" href="#">Магазин</a></li>
+      <li><a class="main-nav__item" href="#">Контакты</a></li>
+    </ul>
+  </nav>
+  <div>
+    <a class="cart" href="#">Корзина</a>
+  </div>
+  <p class="main-header__catalog-slogan">Магазин готовых шаблонов</p>
+</header>
+<main>
+  <aside class="left-menu">
+    <h3 class="visually-hidden">Меню выбора</h3>
+    <ul class="left-menu__list">
+      <li class="left-menu__item">
+        <p class="small-uppercase-letters">Стоимость:</p>
+        <!-- Тут будет форма с бегунком выбора стоимости -->
+      </li>
+      <li class="left-menu__item">
+        <p class="small-uppercase-letters">Сетка:</p>
+        <!-- Тут будет форма с выбором сетки -->
+      </li>
+      <li class="left-menu__item">
+        <p class="small-uppercase-letters">Особенности:</p>
+        <!-- Тут будет форма с выбором сетки -->
+      </li>
+    </ul>
+    <span class="button left-menu__button button--grey">Показать</span>
+  </aside>
+  <section class="catalog">
+    <h3 class="visually-hidden">Меню выбора</h3>
+    <p class="small-uppercase-letters">Сортировать:</p>
+    <nav class="sort-menu">
+      <ul class="sort-menu__list">
+        <li class="sort-menu__item sort-menu__item--active">
+          <span class="sort-menu__button">По цене</span>
+        </li>
+        <li class="sort-menu__item">
+          <span class="sort-menu__button">По типу</span>
+        </li>
+        <li class="sort-menu__item">
+          <span class="sort-menu__button">По названию</span>
+        </li>
+        <li class="sort-menu__item"><img src="#" alt="По убыванию"></li>
+        <li class="sort-menu__item"><img src="#" alt="По возрастанию"></li>
+      </ul>
+    </nav>
+    <ul class="catalog__list">
+      <!-- Вот тут не уверен что именно так надо реализовывать сам каталог и высплывающий кусок с названием и ценой. В ТЗ не написано, но по логике,                  всплывать цена должна при наведении курсора-->
+      <!-- Карточка товара с Седоной -->
+      <li class="catalog__item catalog__item--active">
+        <img src="img/img-sedona.jpg" width="360" height="576" alt="SEDONA. Информационный сайт для туристов">
+        <ul class="catalog__item-price item__price--active">
+          <li><span class="catalog-modal-window__button">Sedona</span></li><!-- Как в ТЗ: Название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать)" -->
+          <li><p class="text--grey">Информационный сайт для туристов</p></li>
+          <li><span class="button catalog__button button--red">9900 руб.</span></li>
+        </ul>
+      </li>
+      <!-- Карточка товара с Pink -->
+      <li class="catalog__item">
+        <img src="img/img-pink.jpg" width="360" height="576"
+             alt="PINK APP. Продуктовый лендинг приложения для iOS и Android">
+        <ul class="catalog__item-price item__price--active">
+          <li><span class="catalog-modal-window__button">PINK APP</span></li>
+          <li><p class="text--grey">Продуктовый лендинг приложения для iOS и Android</p></li>
+          <li><span class="button catalog__button button--red">9900 руб.</span></li>
+        </ul>
+      </li>
+      <!-- Карточка товара с барбершопом -->
+      <li class="catalog__item">
+        <img src="img/img-barbershop.jpg" width="360" height="576"
+             alt="BARBERSHOP. Сайт салоны красоты. Для мужчин, да.">
+        <ul class="catalog__item-price item__price--active">
+          <li><span class="catalog-modal-window__button">BARBERSHOP</span></li>
+          <li><p class="text--grey">Сайт салоны красоты. Для мужчин, да.</p></li>
+          <li><span class="button catalog__button button--red">9900 руб.</span></li>
+        </ul>
+      </li>
+      <!-- Карточка товара MISHKA -->
+      <li class="catalog__item">
+        <img src="img/img-mishka.jpg" width="360" height="576" alt="MISHKA. Интернет-магазин вязаных игрушек">
+        <ul class="catalog__item-price item__price--active">
+          <li><span class="catalog-modal-window__button">MISHKA</span></li>
+          <li><p class="text--grey">Интернет-магазин вязаных игрушек</p></li>
+          <li><span class="button catalog__button button--red">9900 руб.</span></li>
+        </ul>
+      </li>
+      <!-- Карточка товара A PLUS -->
+      <li class="catalog__item">
+        <img src="img/img-barbershop.jpg" width="360" height="576" alt="A PLUS. Лендинг курсов повышения квалификации">
+        <ul class="catalog__item-price item__price--active">
+          <li><span class="catalog-modal-window__button">A PLUS</span></li>
+          <li><p class="text--grey">Лендинг курсов повышения квалификации</p></li>
+          <li><span class="button catalog__button button--red">9900 руб.</span></li>
+        </ul>
+      </li>
+      <!-- Карточка товара КВАСТ -->
+      <li class="catalog__item">
+        <img src="img/img-barbershop.jpg" width="360" height="576" alt="КВАСТ. Промо-сайт производителя крафтового кваса">
+        <ul class="catalog__item-price item__price--active">
+          <li><span class="catalog-modal-window__button">КВАСТ</span></li>
+          <li><p class="text--grey">Промо-сайт производителя крафтового кваса</p></li>
+          <li><span class="button catalog__button button--red">9900 руб.</span></li>
+        </ul>
+      </li>
+    </ul>
+    <nav class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item breadcrumbs__item--active">1</li>
+        <li class="breadcrumbs__item">2</li>
+        <li class="breadcrumbs__item">3</li>
+        <li class="breadcrumbs__item">Следующая</li>
+      </ul>
+    </nav>
+  </section>
+  <section class="address-map">
+    <h3 class="visually-hidden">Контактные реквизиты</h3>
+    <div class="address-map__requisites">
+      <p class="small-uppercase-letters">NЁRDS DESIGN STUDIO</p>
+      <p class="letters--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <p class="letters--grey">тел. +7 (812) 275-75-75</p>
+      <span class="button address-map__button button--red">Заказать</span>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <ul>
+    <li><a class="footer__social-button" href="#">Вконтакте</a></li>
+    <li><a class="footer__social-button" href="#">Фейсбук</a></li>
+    <li><a class="footer__social-button" href="#">Инстаграм</a></li>
+  </ul>
+  <p class="footer__slogan">Давайте дружить, это выгодно!</p>
+  <p>Скидка 10% для друзей из социальных сетей.</p>
+</footer>
+</body>
+</html>
