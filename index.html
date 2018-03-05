@@ -4,17 +4,22 @@
   <meta charset="utf-8">
   <title>Нёрдс: Учебный проект Голованов А.</title>
   <link rel="stylesheet" href="css/style.css">
+  <style type="text/css">
+    .about-company__left-part {
+    }
+  </style>
 </head>
 <body>
 <header class="main-header">
+  <h1 class="visually-hidden">Дизайн-студия Nёrds</h1>
   <nav class="main-nav">
     <a class="main-nav__logo">
-      <img src="img/logo.png" width="160" height="65" alt="Логотип Nёrds">
+      <img src="img/nerds-logo.png" width="160" height="65" alt="Логотип Nёrds">
     </a>
     <ul>
       <li><a class="main-nav__item" href="#">Студия</a></li>
       <li><a class="main-nav__item" href="#">Клиенты</a></li>
-      <li><a class="main-nav__item" href="#">Магазин</a></li>
+      <li><a class="main-nav__item" href="catalog.html">Магазин</a></li>
       <li><a class="main-nav__item" href="#">Контакты</a></li>
     </ul>
   </nav>
@@ -22,7 +27,7 @@
     <a class="cart" href="#">Корзина</a>
   </div>
   <section class="slider">
-    <h3 class="visually-hidden">Слайдер</h3>
+    <h2 class="visually-hidden">Слайдер</h2>
     <ul class="slider__list">
       <li class="slider__item">
         <p class="slider__slogan">Долго, дорого, скрупулезно</p>
@@ -44,7 +49,7 @@
 </header>
 <main>
   <section class="services">
-    <h3 class="visually-hidden">Типы услуг</h3>
+    <h2 class="visually-hidden">Типы услуг</h2>
     <ul class="services__list">
       <li class="services__item">
         <h2>Веб-сайты</h2>
@@ -65,7 +70,7 @@
   </section>
   <section class="about-company">
     <div class="about-company__left-part">
-      <h3 class="visually-hidden">О нас</h3>
+      <h2 class="visually-hidden">О нас</h2>
       <p class="about-company__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара</p>
       <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
         рук, как роботы.</p>
@@ -96,22 +101,24 @@
     </div>
   </section>
   <section class="parnter-logo">
-    <h3 class="visually-hidden">Ссылки на партнерские сайты</h3>
+    <h2 class="visually-hidden">Ссылки на партнерские сайты</h2>
     <ul class="partner-logo_list">
       <!-- Вместо пути к картинкам пока оставил заглушки. Будем стилизовать - заменю на пути -->
-      <li class="partner-logo__item"><img src="#" alt="HTML Academy" class="partner-logo__pict"></li>
+      <li class="partner-logo__item"><img src="https://htmlacademy.ru/intensive/htmlcss" alt="HTML Academy"
+                                          class="partner-logo__pict"></li>
       <li class="partner-logo__item"><img src="#" alt="Barbershop Borodinski" class="partner-logo__pict"></li>
       <li class="partner-logo__item"><img src="#" alt="Pink" class="partner-logo__pict"></li>
       <li class="partner-logo__item"><img src="#" alt="Mishka" class="partner-logo__pict"></li>
     </ul>
   </section>
   <section class="address-map">
-    <h3 class="visually-hidden">Контактные реквизиты</h3>
+    <h2 class="visually-hidden">Контактные реквизиты</h2>
     <div class="address-map__requisites">
       <p class="small-uppercase-letters">NЁRDS DESIGN STUDIO</p>
-      <p class="letters--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      <p class="letters--grey">тел. +7 (812) 275-75-75</p>
-      <span class="button address-map__button button--red">Заказать</span>
+      <address class="letters--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+      <p class="letters--grey">тел.&nbsp;<a href="tel:+78122757575" class="address__tel letters--grey">+7 (812)
+        275-75-75</a></p>
+      <span class="button address-map__button button--red">Напишите нам</span>
     </div>
   </section>
 </main>
@@ -124,5 +131,16 @@
   <p class="footer__slogan">Давайте дружить, это выгодно!</p>
   <p>Скидка 10% для друзей из социальных сетей.</p>
 </footer>
+<!-- Модальное окно при нажатии кнопки "Напишите нам" -->
+<section class="modal-writeus">
+  <h2 class="modal-writeus__title">Напишите нам</h2>
+  <p class="modal-writeus__field-name">Ваше имя:</p>
+  <!-- Поле ввода имени -->
+  <p class="modal__field-name">Ваш e-mail:</p>
+  <!-- Поле ввода почтового адреса -->
+  <p class="modal__field-name">Текст письма:</p>
+  <!-- Поле ввода почтового адреса -->
+  <span class="modal-close">x</span>
+</section>
 </body>
 </html>

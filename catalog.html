@@ -7,9 +7,10 @@
 </head>
 <body>
 <header class="main-header">
+  <h1 class="visually-hidden">Дизайн-студия Nёrds</h1>
   <nav class="main-nav">
-    <a class="main-nav__logo">
-      <img src="img/logo.png" width="160" height="65" alt="Логотип Nёrds">
+    <a href="index.html" class="main-nav__logo">
+      <img src="img/nerds-logo.png" width="160" height="65" alt="Логотип Nёrds">
     </a>
     <ul>
       <li><a class="main-nav__item" href="#">Студия</a></li>
@@ -25,7 +26,7 @@
 </header>
 <main>
   <aside class="left-menu">
-    <h3 class="visually-hidden">Меню выбора</h3>
+    <h2 class="visually-hidden">Меню выбора</h2>
     <ul class="left-menu__list">
       <li class="left-menu__item">
         <p class="small-uppercase-letters">Стоимость:</p>
@@ -43,9 +44,9 @@
     <span class="button left-menu__button button--grey">Показать</span>
   </aside>
   <section class="catalog">
-    <h3 class="visually-hidden">Меню выбора</h3>
+    <h2 class="visually-hidden">Каталог</h2>
     <p class="small-uppercase-letters">Сортировать:</p>
-    <nav class="sort-menu">
+    <div class="sort-menu">
       <ul class="sort-menu__list">
         <li class="sort-menu__item sort-menu__item--active">
           <span class="sort-menu__button">По цене</span>
@@ -59,82 +60,101 @@
         <li class="sort-menu__item"><img src="#" alt="По убыванию"></li>
         <li class="sort-menu__item"><img src="#" alt="По возрастанию"></li>
       </ul>
-    </nav>
+    </div>
     <ul class="catalog__list">
-      <!-- Вот тут не уверен что именно так надо реализовывать сам каталог и высплывающий кусок с названием и ценой. В ТЗ не написано, но по логике,                  всплывать цена должна при наведении курсора-->
       <!-- Карточка товара с Седоной -->
-      <li class="catalog__item catalog__item--active">
-        <img src="img/img-sedona.jpg" width="360" height="576" alt="SEDONA. Информационный сайт для туристов">
-        <ul class="catalog__item-price item__price--active">
-          <li><span class="catalog-modal-window__button">Sedona</span></li><!-- Как в ТЗ: Название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара (макета нет, модальное окно не делать)" -->
-          <li><p class="text--grey">Информационный сайт для туристов</p></li>
-          <li><span class="button catalog__button button--red">9900 руб.</span></li>
-        </ul>
+      <li class="catalog__item">
+        <article>
+          <img src="img/img-sedona.jpg" width="360" height="576"
+               alt="SEDONA. Информационный сайт для туристов">
+          <div class="catalog__item-price">
+            <h3 class="catalog-modal-window__link"><a href="#">SEDONA</a></h3>
+            <p class="text--grey">Информационный сайт для туристов</p>
+            <span class="button catalog__button button--red">9900 руб.</span>
+            <!-- Все-таки это кнопка. В ТЗ в п.3.11. написано "Карточка товара: при наполнении текстом блок с текстом не должен вылезать за границы изображения, _кнопка (!!!) покупки не должна пропадать_."-->
+          </div>
+        </article>
       </li>
       <!-- Карточка товара с Pink -->
       <li class="catalog__item">
-        <img src="img/img-pink.jpg" width="360" height="576"
-             alt="PINK APP. Продуктовый лендинг приложения для iOS и Android">
-        <ul class="catalog__item-price item__price--active">
-          <li><span class="catalog-modal-window__button">PINK APP</span></li>
-          <li><p class="text--grey">Продуктовый лендинг приложения для iOS и Android</p></li>
-          <li><span class="button catalog__button button--red">9900 руб.</span></li>
-        </ul>
+        <article>
+          <img src="img/img-pink.jpg" width="360" height="576"
+               alt="PINK APP. Продуктовый лендинг приложения для iOS и Android">
+          <div class="catalog__item-price item__price--active">
+            <h3 class="catalog-modal-window__link"><a href="#">PINK APP</a></h3>
+            <p class="text--grey">Продуктовый лендинг приложения для iOS и Android</p>
+            <span class="button catalog__button button--red">9900 руб.</span>
+          </div>
+        </article>
       </li>
       <!-- Карточка товара с барбершопом -->
       <li class="catalog__item">
-        <img src="img/img-barbershop.jpg" width="360" height="576"
-             alt="BARBERSHOP. Сайт салоны красоты. Для мужчин, да.">
-        <ul class="catalog__item-price item__price--active">
-          <li><span class="catalog-modal-window__button">BARBERSHOP</span></li>
-          <li><p class="text--grey">Сайт салоны красоты. Для мужчин, да.</p></li>
-          <li><span class="button catalog__button button--red">9900 руб.</span></li>
-        </ul>
+        <article>
+          <img src="img/img-barbershop.jpg" width="360" height="576"
+               alt="BARBERSHOP. Сайт салоны красоты. Для мужчин, да.">
+          <div class="catalog__item-price item__price--active">
+            <h3 class="catalog-modal-window__link"><a href="#">BARBERSHOP</a></h3>
+            <p class="text--grey">Сайт салоны красоты. Для мужчин, да.</p>
+            <span class="button catalog__button button--red">9900 руб.</span>
+          </div>
+        </article>
       </li>
-      <!-- Карточка товара MISHKA -->
+      <!--Карточка товара MISHKA-->
       <li class="catalog__item">
-        <img src="img/img-mishka.jpg" width="360" height="576" alt="MISHKA. Интернет-магазин вязаных игрушек">
-        <ul class="catalog__item-price item__price--active">
-          <li><span class="catalog-modal-window__button">MISHKA</span></li>
-          <li><p class="text--grey">Интернет-магазин вязаных игрушек</p></li>
-          <li><span class="button catalog__button button--red">9900 руб.</span></li>
-        </ul>
+        <article>
+          <img src="img/img-mishka.jpg" width="360" height="576"
+               alt="MISHKA. Интернет-магазин вязаных игрушек">
+          <div class="catalog__item-price item__price--active">
+            <h3 class="catalog-modal-window__link"><a href="#">MISHKA</a></h3>
+            <p class="text--grey">Интернет-магазин вязаных игрушек</p>
+            <span class="button catalog__button button--red">9900 руб.</span>
+          </div>
+        </article>
       </li>
-      <!-- Карточка товара A PLUS -->
+      <!--Карточка товара A PLUS-->
       <li class="catalog__item">
-        <img src="img/img-barbershop.jpg" width="360" height="576" alt="A PLUS. Лендинг курсов повышения квалификации">
-        <ul class="catalog__item-price item__price--active">
-          <li><span class="catalog-modal-window__button">A PLUS</span></li>
-          <li><p class="text--grey">Лендинг курсов повышения квалификации</p></li>
-          <li><span class="button catalog__button button--red">9900 руб.</span></li>
-        </ul>
+        <article>
+          <img src="img/img-aplus.jpg" width="360" height="576"
+               alt="A PLUS. Лендинг курсов повышения квалификации">
+          <div class="catalog__item-price item__price--active">
+            <h3 class="catalog-modal-window__link"><a href="#">A PLUS</a></h3>
+            <p class="text--grey">Лендинг курсов повышения квалификации</p>
+            <span class="button catalog__button button--red">9900 руб.</span>
+          </div>
+        </article>
       </li>
+
       <!-- Карточка товара КВАСТ -->
       <li class="catalog__item">
-        <img src="img/img-barbershop.jpg" width="360" height="576" alt="КВАСТ. Промо-сайт производителя крафтового кваса">
-        <ul class="catalog__item-price item__price--active">
-          <li><span class="catalog-modal-window__button">КВАСТ</span></li>
-          <li><p class="text--grey">Промо-сайт производителя крафтового кваса</p></li>
-          <li><span class="button catalog__button button--red">9900 руб.</span></li>
-        </ul>
+        <article class="catalog__item">
+          <img src="img/img-kvast.jpg" width="360" height="576"
+               alt="КВАСТ. Промо-сайт производителя крафтового кваса">
+          <div class="catalog__item-price item__price--active">
+            <h3 class="catalog-modal-window__link"><a href="#">КВАСТ</a></h3>
+            <p class="text--grey">Промо-сайт производителя крафтового кваса</p>
+            <span class="button catalog__button button--red">9900 руб.</span>
+          </div>
+        </article>
       </li>
     </ul>
-    <nav class="breadcrumbs">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item breadcrumbs__item--active">1</li>
-        <li class="breadcrumbs__item">2</li>
-        <li class="breadcrumbs__item">3</li>
-        <li class="breadcrumbs__item">Следующая</li>
+    <div class="paginator">
+      <ul class="paginator__list">
+        <li class="paginator__item breadcrumbs__item--active"><a class="paginator__link" href="#">1</a></li>
+        <li class="paginator__item"><a class="paginator__link" href="#">2</a></li>
+        <li class="paginator__item"><a class="paginator__link" href="#">3</a></li>
+        <li class="paginator__item"><a class="paginator__link" href="#">Следующая</a></li>
       </ul>
-    </nav>
+    </div>
   </section>
   <section class="address-map">
-    <h3 class="visually-hidden">Контактные реквизиты</h3>
+    <h2 class="visually-hidden">Контактные реквизиты</h2>
     <div class="address-map__requisites">
       <p class="small-uppercase-letters">NЁRDS DESIGN STUDIO</p>
-      <p class="letters--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      <p class="letters--grey">тел. +7 (812) 275-75-75</p>
-      <span class="button address-map__button button--red">Заказать</span>
+      <address class="address letters--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+      <!-- <address class="letters--grey">тел. +7 (812) 275-75-75</address> -->
+      <p class="letters--grey">тел.&nbsp;<a href="tel:+78122757575" class="address__tel letters--grey">+7 (812)
+        275-75-75</a></p>
+      <span class="button address-map__button button--red">Напишите нам</span>
     </div>
   </section>
 </main>
@@ -147,5 +167,16 @@
   <p class="footer__slogan">Давайте дружить, это выгодно!</p>
   <p>Скидка 10% для друзей из социальных сетей.</p>
 </footer>
+<!-- Модальное окно при нажатии кнопки "Напишите нам" -->
+<section class="modal-writeus">
+  <h2 class="modal-writeus__title">Напишите нам</h2>
+  <p class="modal-writeus__field-name">Ваше имя:</p>
+  <!-- Поле ввода имени -->
+  <p class="modal__field-name">Ваш e-mail:</p>
+  <!-- Поле ввода почтового адреса -->
+  <p class="modal__field-name">Текст письма:</p>
+  <!-- Поле ввода почтового адреса -->
+  <span class="modal-close">x</span>
+</section>
 </body>
 </html>
