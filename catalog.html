@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Нёрдс: Учебный проект Голованов А.</title>
@@ -7,132 +7,200 @@
 </head>
 <body>
 <header class="main-header">
-  <h1 class="visually-hidden">Дизайн-студия Nёrds</h1>
+  <h2 class="visually-hidden">Дизайн-студия Nёrds</h2>
   <nav class="main-nav">
     <a href="index.html" class="main-nav__logo">
-      <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Nёrds">
+      <img class="main-nav__logo-img" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Nёrds">
     </a>
-    <ul>
-      <li><a class="main-nav__item" href="#">Студия</a></li>
-      <li><a class="main-nav__item" href="#">Клиенты</a></li>
-      <li><a class="main-nav__item main-nav__item--active" href="#">Магазин</a></li>
-      <li><a class="main-nav__item" href="#">Контакты</a></li>
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a class="main-nav__item" href="#">Студия</a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__item" href="#">Клиенты</a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__item main-nav__item--active" href="#">Магазин</a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__item" href="#">Контакты</a>
+      </li>
     </ul>
   </nav>
-  <div>
-    <a class="cart" href="#">Корзина</a>
+  <div class="main-header__cart-container">
+    <a class="main-header__cart-link" href="#">Корзина</a>
   </div>
-  <p class="main-header__catalog-slogan">Магазин готовых шаблонов</p>
+  <h1 class="main-header__catalog-slogan">Магазин готовых шаблонов</h1>
 </header>
-<main>
+<main class="main">
   <aside class="left-menu">
     <h2 class="visually-hidden">Меню выбора</h2>
-    <ul class="left-menu__list">
-      <li class="left-menu__item">
-        <p class="small-uppercase-letters">Стоимость:</p>
-        <!-- Тут будет форма с бегунком выбора стоимости -->
-      </li>
-      <li class="left-menu__item">
-        <p class="small-uppercase-letters">Сетка:</p>
-        <!-- Тут будет форма с выбором сетки -->
-      </li>
-      <li class="left-menu__item">
-        <p class="small-uppercase-letters">Особенности:</p>
-        <!-- Тут будет форма с выбором сетки -->
-      </li>
-    </ul>
-    <span class="button left-menu__button button--grey">Показать</span>
+    <form class="left-menu__filter" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="left-menu__fieldset">
+        <legend class="left-menu__legend left-menu__legend--bottom-indent">Стоимость:</legend>
+        <label class="visually-hidden" for="cost">Выбор стоимости</label>
+        <input class="left-menu__cost" type="range" id="cost" name="cost" min="0" max="99999">
+        <label class="left-menu__label left-menu__label--bottom-indent left-menu__label--capital-letters" for="lower-bound">От</label>
+        <input class="left-menu__range-bounds" type="number" id="lower-bound" name="lower-bound" min="0" max="99999">
+        <label class="left-menu__label left-menu__label--bottom-indent left-menu__label--capital-letters" for="upper-bound">До</label>
+        <input class="left-menu__range-bounds" type="number" id="upper-bound" name="upper-bound" min="9900" max="99999">
+      </fieldset>
+      <fieldset class="left-menu__grid-fieldset">
+        <legend class="left-menu__grid-legend">Сетка:</legend>
+        <ul class="left-menu__grid-list">
+          <li class="left-menu__grid-item">
+            <input class="left-menu__grid-radiobutton" type="radio" name="grid" value="adaptive" id="adaptive-grid"
+                   aria-label="Адаптивная сетка">
+            <label class="left-menu__grid-label" for="adaptive-grid">Адаптивная</label>
+          </li>
+          <li class="left-menu__grid-item">
+            <input class="left-menu__grid-radiobutton" type="radio" name="grid" value="fixed" id="fixed-grid"
+                   aria-label="Фиксированная сетка">
+            <label class="left-menu__grid-label" for="fixed-grid">Фиксированная</label>
+          </li>
+          <li class="left-menu__grid-item">
+            <input class="left-menu__grid-radiobutton" type="radio" name="grid" value="rubber" id="rubber-grid"
+                   aria-label="Резиновая сетка">
+            <label class="left-menu__grid-label" for="rubber-grid">Резиновая</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="left-menu__features-fieldset">
+        <legend class="left-menu__legend">Особенности:</legend>
+        <ul class="left-menu__features-list">
+          <li class="left-menu__features-item">
+            <input class="left-menu__features-checkbox" type="checkbox" name="slider" id="slider-feature" checked
+                   aria-label="Слайдер">
+            <label class="left-menu__features-label" for="slider-feature">Слайдер</label>
+          </li>
+          <li class="left-menu__features-item">
+            <input class="left-menu__features-checkbox" type="checkbox" name="advantage" id="advantage-feature"
+                   aria-label="Блок преимуществ">
+            <label class="left-menu__features-label" for="advantage-feature">Блок преимуществ</label>
+          </li>
+          <li class="left-menu__features-item">
+            <input class="left-menu__features-checkbox" type="checkbox" name="news" id="news-feature" checked aria-label="Новости">
+            <label class="left-menu__features-label" for="news-feature">Новости</label>
+          </li>
+          <li class="left-menu__features-item">
+            <input class="left-menu__features-checkbox" type="checkbox" name="gallery" id="gallery-feature" aria-label="Галерея">
+            <label class="left-menu__features-label" for="gallery-feature">Галерея</label>
+          </li>
+          <li class="left-menu__features-item">
+            <input class="left-menu__features-checkbox" type="checkbox" name="cart" id="cart-feature" aria-label="Корзина">
+            <label class="left-menu__features-label" for="cart-feature">Корзина</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="button left-menu__button button--grey" type="submit">Показать</button>
+    </form>
   </aside>
   <section class="catalog">
-    <h2 class="visually-hidden">Каталог</h2>
-    <p class="small-uppercase-letters">Сортировать:</p>
-    <div class="sort-menu">
-      <ul class="sort-menu__list">
-        <li class="sort-menu__item sort-menu__item--active">
-          <span class="sort-menu__button">По цене</span>
+    <h2 class="visually-hidden">Каталог шаблонов</h2>
+    <div class="catalog__sort-menu">
+      <p class="catalog__sort-menu-subtitle">Сортировать:</p>
+      <ul class="catalog__sort-menu-list">
+        <li class="catalog__sort-menu-item catalog__sort-menu-item--active">
+          <a class="catalog__sort-menu-link" href="#">По цене</a>
         </li>
-        <li class="sort-menu__item">
-          <span class="sort-menu__button">По типу</span>
+        <li class="catalog__sort-menu-item">
+          <a class="catalog__sort-menu-link" href="#">По типу</a>
         </li>
-        <li class="sort-menu__item">
-          <span class="sort-menu__button">По названию</span>
+        <li class="catalog__sort-menu-item">
+          <a class="catalog__sort-menu-link" href="#">По названию</a>
         </li>
-        <li class="sort-menu__item"><img src="#" alt="По убыванию"></li>
-        <li class="sort-menu__item"><img src="#" alt="По возрастанию"></li>
+      </ul>
+      <ul class="catalog__sort-ascdesc">
+        <li class="catalog__sort-ascdesc-item">
+          <a class="catalog__sort-ascdesc-link" href="#">Сортировка по убыванию</a>
+        </li>
+        <li class="catalog__sort-ascdesc-item">
+          <a class="catalog__sort-ascdesc-link" href="#">Сортировка по возрастанию</a>
+        </li>
       </ul>
     </div>
     <ul class="catalog__list">
       <!-- Карточка товара с Седоной -->
       <li class="catalog__item">
-        <article>
-          <img src="img/img-sedona.jpg" width="360" height="576"
+        <article class="product-card">
+          <img class="product-card__img" src="img/img-sedona.jpg" width="360" height="576"
                alt="SEDONA. Информационный сайт для туристов">
-          <div class="catalog__item-price">
-            <h3 class="catalog-modal-window__link"><a href="#">SEDONA</a></h3>
-            <p class="text--grey">Информационный сайт для туристов</p>
-            <span class="button catalog__button button--red">9900 руб.</span>
-            <!-- Все-таки это кнопка. В ТЗ в п.3.11. написано "Карточка товара: при наполнении текстом блок с текстом не должен вылезать за границы изображения, _кнопка (!!!) покупки не должна пропадать_."-->
+          <!-- Всплывающий ценник -->
+          <div class="product-card__pricetag">
+            <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-modal-window-link"
+                                                        href="#">SEDONA</a></h3>
+            <p class="product-card__pricetag-plain-text text--grey">Информационный сайт для туристов</p>
+            <button class="button product-card__button button--red" type="button">9900 руб.</button>
           </div>
         </article>
       </li>
       <!-- Карточка товара с Pink -->
       <li class="catalog__item">
-        <article>
-          <img src="img/img-pink.jpg" width="360" height="576"
+        <article class="product-card">
+          <img class="product-card__img" src="img/img-pink.jpg" width="360" height="576"
                alt="PINK APP. Продуктовый лендинг приложения для iOS и Android">
-          <div class="catalog__item-price item__price--active">
-            <h3 class="catalog-modal-window__link"><a href="#">PINK APP</a></h3>
-            <p class="text--grey">Продуктовый лендинг приложения для iOS и Android</p>
-            <span class="button catalog__button button--red">9900 руб.</span>
+          <!-- Всплывающий ценник -->
+          <div class="product-card__pricetag">
+            <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-modal-window-link" href="#">PINK
+              APP</a></h3>
+            <p class="product-card__pricetag-plain-text text--grey">Продуктовый лендинг приложения для iOS и Android</p>
+            <button class="button product-card__button button--red" type="button">9900 руб.</button>
           </div>
         </article>
       </li>
       <!-- Карточка товара с барбершопом -->
       <li class="catalog__item">
-        <article>
-          <img src="img/img-barbershop.jpg" width="360" height="576"
+        <article class="product-card">
+          <img class="product-card__img" src="img/img-barbershop.jpg" width="360" height="576"
                alt="BARBERSHOP. Сайт салоны красоты. Для мужчин, да.">
-          <div class="catalog__item-price item__price--active">
-            <h3 class="catalog-modal-window__link"><a href="#">BARBERSHOP</a></h3>
-            <p class="text--grey">Сайт салоны красоты. Для мужчин, да.</p>
-            <span class="button catalog__button button--red">9900 руб.</span>
+          <!-- Всплывающий ценник -->
+          <div class="product-card__pricetag">
+            <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-modal-window-link" href="#">BARBERSHOP</a>
+            </h3>
+            <p class="product-card__pricetag-plain-text text--grey">Сайт салоны красоты. Для мужчин, да.</p>
+            <button class="button product-card__button button--red" type="button">9900 руб.</button>
           </div>
         </article>
       </li>
       <!--Карточка товара MISHKA-->
       <li class="catalog__item">
-        <article>
-          <img src="img/img-mishka.jpg" width="360" height="576"
+        <article class="product-card">
+          <img class="product-card__img" src="img/img-mishka.jpg" width="360" height="576"
                alt="MISHKA. Интернет-магазин вязаных игрушек">
-          <div class="catalog__item-price item__price--active">
-            <h3 class="catalog-modal-window__link"><a href="#">MISHKA</a></h3>
-            <p class="text--grey">Интернет-магазин вязаных игрушек</p>
-            <span class="button catalog__button button--red">9900 руб.</span>
+          <!-- Всплывающий ценник -->
+          <div class="product-card__pricetag">
+            <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-modal-window-link"
+                                                        href="#">MISHKA</a></h3>
+            <p class="product-card__pricetag-plain-text text--grey">Интернет-магазин вязаных игрушек</p>
+            <button class="button product-card__button button--red" type="button">9900 руб.</button>
           </div>
         </article>
       </li>
-      <!--Карточка товара A PLUS-->
+      <!-- Карточка товара A PLUS -->
       <li class="catalog__item">
-        <article>
-          <img src="img/img-aplus.jpg" width="360" height="576"
+        <article class="product-card">
+          <img class="product-card__img" src="img/img-aplus.jpg" width="360" height="576"
                alt="A PLUS. Лендинг курсов повышения квалификации">
-          <div class="catalog__item-price item__price--active">
-            <h3 class="catalog-modal-window__link"><a href="#">A PLUS</a></h3>
-            <p class="text--grey">Лендинг курсов повышения квалификации</p>
-            <span class="button catalog__button button--red">9900 руб.</span>
+          <!-- Всплывающий ценник -->
+          <div class="product-card__pricetag">
+            <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-modal-window-link" href="#">A
+              PLUS</a></h3>
+            <p class="product-card__pricetag-plain-text text--grey">Лендинг курсов повышения квалификации</p>
+            <button class="button product-card__button button--red" type="button">9900 руб.</button>
           </div>
         </article>
       </li>
-
       <!-- Карточка товара КВАСТ -->
       <li class="catalog__item">
-        <article class="catalog__item">
-          <img src="img/img-kvast.jpg" width="360" height="576"
+        <article class="product-card">
+          <img class="product-card__img" src="img/img-kvast.jpg" width="360" height="576"
                alt="КВАСТ. Промо-сайт производителя крафтового кваса">
-          <div class="catalog__item-price item__price--active">
-            <h3 class="catalog-modal-window__link"><a href="#">КВАСТ</a></h3>
-            <p class="text--grey">Промо-сайт производителя крафтового кваса</p>
-            <span class="button catalog__button button--red">9900 руб.</span>
+          <!-- Всплывающий ценник -->
+          <div class="product-card__pricetag">
+            <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-modal-window-link"
+                                                        href="#">КВАСТ</a></h3>
+            <p class="product-card__pricetag-plain-text text--grey">Промо-сайт производителя крафтового кваса</p>
+            <button class="button product-card__button button--red" type="button">9900 руб.</button>
           </div>
         </article>
       </li>
@@ -142,41 +210,55 @@
         <li class="paginator__item breadcrumbs__item--active"><a class="paginator__link" href="#">1</a></li>
         <li class="paginator__item"><a class="paginator__link" href="#">2</a></li>
         <li class="paginator__item"><a class="paginator__link" href="#">3</a></li>
-        <li class="paginator__item"><a class="paginator__link" href="#">Следующая</a></li>
       </ul>
+      <div class="paginator__next">
+        <a class="paginator__link" href="#">Следующая</a>
+      </div>
     </div>
   </section>
-  <section class="address-map">
-    <img  class="map" src="img/map.jpg" alt="Схема проезда">
-    <h2 class="visually-hidden">Контактные реквизиты</h2>
-    <div class="address-map__requisites">
-      <p class="small-uppercase-letters">NЁRDS DESIGN STUDIO</p>
-      <address class="address letters--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-      <p class="letters--grey">тел.&nbsp;<a href="tel:+78122757575" class="address__tel letters--grey">+7 (812)
+  <section class="contacts">
+    <h2 class="visually-hidden">Как с нами связаться</h2>
+    <img class="contacts__map" src="img/map.jpg"
+         alt="Адрес дизайн-студии 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    <div class="contacts__requisites">
+      <p class="contacts__subtitle">NЁRDS DESIGN STUDIO</p>
+      <address class="contacts__plain-text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+      <p class="contacts__plain-text">тел.&nbsp;<a class="contacts__tel" href="tel:+78122757575">+7 (812)
         275-75-75</a></p>
-      <span class="button address-map__button button--red">Напишите нам</span>
+      <a class="button contacts__button button--red" href="#">Напишите нам</a>
     </div>
   </section>
 </main>
 <footer class="footer">
-  <ul>
-    <li><a class="footer__social-button" href="#"><img class="footer__social-icon" src="img/vk-icon.svg" alt="ВКонтакте"></a></li>
-    <li><a class="footer__social-button" href="#"><img class="footer__social-icon" src="img/fb-icon.svg" alt="Facebook"></a></li>
-    <li><a class="footer__social-button" href="#"><img class="footer__social-icon" src="img/insta-icon.svg" alt="Instagram"></a></li>
+  <ul class="footer__list">
+    <li class="footer__item">
+      <a class="footer__social-button" href="#">ВКонтакте</a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__social-button" href="#">Facebook</a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__social-button" href="#">Instagram</a>
+    </li>
   </ul>
-  <p class="footer__slogan">Давайте дружить, это выгодно!</p>
-  <p>Скидка 10% для друзей из социальных сетей.</p>
+  <b class="footer__slogan">Давайте дружить, это выгодно!<br>
+    <span class="footer__slogan--plain-text">Скидка 10% для друзей из социальных сетей.</span></b>
 </footer>
 <!-- Модальное окно при нажатии кнопки "Напишите нам" -->
 <section class="modal-writeus">
-  <h2 class="modal-writeus__title">Напишите нам</h2>
-  <p class="modal-writeus__field-name">Ваше имя:</p>
-  <!-- Поле ввода имени -->
-  <p class="modal__field-name">Ваш e-mail:</p>
-  <!-- Поле ввода почтового адреса -->
-  <p class="modal__field-name">Текст письма:</p>
-  <!-- Поле ввода почтового адреса -->
-  <span class="modal-close">x</span>
+  <header class="modal-writeus__header">
+    <h2 class="modal-writeus__title">Напишите нам</h2>
+    <button class="modal-close" type="button">Закрыть</button>
+  </header>
+  <form class="modal-writeus__form" action="https://echo.htmlacademy.ru" method="post">
+    <label class="modal-writeus__label" for="user-name">Ваше имя: </label>
+    <input class="modal-writeus__text-field" type="text" name="user-name" id="user-name" placeholder="Имя Фамилия" required aria-label="Поле ввода имени">
+    <label class="modal-writeus__label" for="user-email">Ваш e-mail: </label>
+    <input class="modal-writeus__text-field" type="email" name="user-email" id="user-email" placeholder="email@example.com" required aria-label="Поле ввода email">
+    <label class="modal-writeus__label" for="user-textarea">Текст письма: </label>
+    <textarea class="modal-writeus__textarea" name="user-letter" id="user-textarea" placeholder="В свободной форме" rows="3" cols="40"></textarea>
+    <button class="button  modal-writeus__submit-button button--red" type="submit">Отправить</button>
+  </form>
 </section>
 </body>
 </html>
