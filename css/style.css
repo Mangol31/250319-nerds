@@ -1,1 +1,387 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic');
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-nav__list,
+.slider__list,
+.slider__switcher-list,
+.services__list,
+.about-company__rpart-list,
+.partner-logo__list,
+.footer__list,
+.left-menu__grid-list,
+.left-menu__features-list,
+.catalog__sort-menu-list,
+.catalog__list,
+.catalog__sort-ascdesc-list,
+.paginator__list {
+  list-style-type: none;
+}
+
+/*Вот это закомментил, т.к. так и не смог придумать, как svg перекрашивать при получении ссылкой фокуса с клаиватуры. Мышкой просто - там курсок именно на svg наводится. А с клавиатуры - на ссылку*/
+/*.main-nav__logo:focus {*/
+/*outline: none;*/
+/*}*/
+.main-nav__logo svg {
+  fill: #000000;
+}
+
+.main-nav__logo svg:hover,
+.main-nav__logo svg:focus {
+  fill: #303030;
+}
+
+.main-nav__logo svg:active {
+  fill: #a6a6a6;
+}
+
+.main-nav__link,
+.main-header__cart-link {
+  line-height: 30px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.main-header {
+  background-color: #eeeeee;
+}
+
+.main-nav__link:hover,
+.main-header__cart-link:hover,
+.main-nav__link:focus,
+.main-header__cart-link:focus {
+  color: #fb565a;
+  outline: none;
+}
+
+.main-nav__link:active,
+.main-header__cart-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-nav__link--active {
+  border-bottom: 2px solid #fb565a;
+}
+
+.slider__slogan {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.button {
+  /*height: 50px;*/
+  /*border-radius: 5px;*/
+  /*box-sizing: border-box;*/
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.slider__button {
+  /*display: block;*/
+  /*width: 240px;*/
+  /*padding-top: 17px;*/
+  /*padding-bottom: 19px;*/
+}
+
+.button--red {
+  background-color: #fb565a;
+  border: none;
+}
+
+.button--red:focus,
+.button--red:hover {
+  background-color: #e74246;
+  outline: none;
+}
+
+.button--red:active {
+  background-color: #d7373b;
+}
+
+.services__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services__button {
+  /*padding-top: 17px;*/
+  /*padding-bottom: 19px;*/
+}
+
+.button--green {
+  background-color: #00ca74;
+}
+
+.button--green:hover {
+  background-color: #00bc6c;
+}
+
+.button--green:active {
+  background-color: #00aa62;
+}
+
+.button--yellow {
+  background-color: #efc84a;
+}
+
+.button--yellow:hover {
+  background-color: #eab534;
+}
+
+.button--yellow:active {
+  background-color: #e5a722;
+}
+
+.about-company__slogan,
+.modal-writeus__title {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.about-company__subtitle {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-company__percents {
+  font-size: 45px;
+  line-height: 10px;
+  font-weight: 700;
+}
+
+.about-company__rpart-item .about-company__plain-text {
+  line-height: 18px;
+}
+
+.contacts__subtitle {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.contacts__plain-text,
+.contacts__plain-text .contacts__tel {
+  line-height: 18px;
+  font-style: normal;
+}
+
+.text--grey {
+  color: #666666;
+}
+
+.footer__slogan {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.footer__slogan--plain-text {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.footer__social-button {
+  color: #ffffff;
+  background-color: #e1e1e1; /*TODO Убрать после стилизации значка*/
+}
+
+.footer__social-button:hover,
+.footer__social-button:focus {
+  color: #ffffff;
+  border: 0;
+  background-color: #e74246; /*TODO Убрать после стилизации значка*/
+  outline: none;
+}
+
+.footer__social-button:active {
+  color: #e37376;
+  background-color: #d7373b; /*TODO Убрать после стилизации значка*/
+}
+
+.modal-writeus__label {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.modal-form__input-item:invalid {
+  border: 2px solid #e74246;
+  color: #e74246;
+}
+
+.modal-form__input-item:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.modal-form__input-item:focus {
+  border: 2px solid #000000;
+  color: #444444;
+  outline: 0;
+}
+
+.modal-form__input-item {
+  line-height: 18px;
+  border: 2px solid #d7dcde;
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.left-menu__fieldset {
+  border: none;
+}
+
+.left-menu__legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.left-menu__cost-label {
+  line-height: 22px;
+  color: #283136;
+  text-transform: uppercase;
+}
+
+.left-menu__range-bounds {
+  border: 1px solid #eeeeee;
+  background-color: #eeeeee;
+}
+
+/*.left-menu__grid-radiobutton:focus,*/
+/*.left-menu__features-checkbox:focus {*/
+/*outline:none;*/
+/*}*/
+
+.left-menu__grid-radiobutton:hover,
+.left-menu__features-checkbox:hover,
+.left-menu__grid-label:hover,
+.left-menu__features-label:hover {
+  color: #000000;
+  line-height: 20px;
+}
+
+.left-menu__grid-label:disabled,
+.left-menu__features-label:disabled {
+  color: rgba(00, 00, 00, 0.3);
+}
+
+.left-menu__grid-radiobutton,
+.left-menu__features-checkbox,
+.left-menu__grid-label,
+.left-menu__features-label {
+  color: #283136;
+}
+
+.button--grey {
+  background-color: #eeeeee;
+  border: none;
+  color: #000000;
+}
+
+.catalog__sort-menu-subtitle {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.catalog__sort-menu-link,
+.catalog__sort-ascdesc-link {
+  line-height: 18px;
+  color: rgba(00, 00, 00, 0.3);
+  text-transform: uppercase;
+}
+
+.catalog__sort-menu-link--active,
+.catalog__sort-ascdesc-link--active,
+.catalog__sort-menu-link:active,
+.catalog__sort-ascdesc-link:active {
+  color: #000000;
+}
+
+.catalog__sort-menu-link:hover,
+.catalog__sort-ascdesc-link:hover,
+.catalog__sort-menu-link:focus,
+.catalog__sort-ascdesc-link:focus {
+  color: rgba(00, 00, 00, 0.6);
+}
+
+.product-card__pricetag-modal-window-link {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.product-card__pricetag-plain-text {
+  line-height: 18px;
+}
+
+/*.paginator__item {*/
+/*text-align: center;*/
+/*border: 3px solid #eeeeee;*/
+/*background-color: #eeeeee;*/
+/*!*box-sizing: border-box;*!*/
+/*!*border-radius: 3px;*!*/
+/*}*/
+
+.paginator__link {
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  border: 3px solid #eeeeee;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+
+.paginator__link:hover {
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  border: 3px solid #d5d5d5;
+  border-radius: 3px;
+  background-color: #d5d5d5;
+}
+
+.paginator__link:focus {
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  border: 3px solid #d5d5d5;
+  border-radius: 3px;
+  background-color: #d5d5d5;
+  outline: none;
+}
+
+.paginator__link:active {
+  color: rgba(00, 00, 00, 0.3);
+}
+
+.paginator__link--active {
+  border: 3px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}

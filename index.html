@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Нёрдс: Учебный проект Голованов А.</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -75,14 +76,14 @@
         <img class="services__icon" src="img/illustration-3.jpg" alt="Презентации">
         <h3 class="services__title">Презентации</h3>
         <p class="services__plain-text">Вы даже не подозреваете, насколько вы изумительны!</p>
-        <a class="button services__button button--green" href="#">Заказать</a>
+        <a class="button services__button button--yellow" href="#">Заказать</a>
       </li>
     </ul>
   </section>
   <section class="about-company">
     <h2 class="visually-hidden">О нас</h2>
     <div class="about-company__left-part">
-      <b class="about-company__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара</b>
+      <b class="about-company__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
       <p class="about-company__plain-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
         превыше креатива. Работаем не покладая
         рук, как роботы.</p>
@@ -95,7 +96,7 @@
     </div>
     <div class="about-company__right-part">
       <b class="about-company__subtitle about-company__subtitle--centered-condensed">с 2004 года Любим точность во
-        всем:</b><
+        всем:</b>
       <ul class="about-company__rpart-list">
         <li class="about-company__rpart-item">
           <b class="about-company__percents">146<sup>%</sup></b>
@@ -114,15 +115,15 @@
   </section>
   <section class="parnter-logo">
     <h2 class="visually-hidden">Ссылки на партнерские сайты</h2>
-    <ul class="partner-logo_list">
+    <ul class="partner-logo__list">
       <li class="partner-logo__item">
         <a class="partner-logo__link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img class="partner-logo__pict" src="img/logo-1.png"  alt="Сайт HTML Academy">
+          <img class="partner-logo__pict" src="img/logo-1.png" alt="Сайт HTML Academy">
         </a>
       </li>
       <li class="partner-logo__item">
         <a class="partner-logo__link" href="#">
-          <img class="partner-logo__pict" src="img/logo-2.png"  alt="Сайт Barbershop Borodinski">
+          <img class="partner-logo__pict" src="img/logo-2.png" alt="Сайт Barbershop Borodinski">
         </a>
       </li>
       <li class="partner-logo__item">
@@ -132,7 +133,7 @@
       </li>
       <li class="partner-logo__item">
         <a class="partner-logo__link" href="#">
-          <img class="partner-logo__pict" src="img/logo-4.png"  alt="Сайт Mishka">
+          <img class="partner-logo__pict" src="img/logo-4.png" alt="Сайт Mishka">
         </a>
       </li>
     </ul>
@@ -169,19 +170,19 @@
 <section class="modal-writeus">
   <header class="modal-writeus__header">
     <h2 class="modal-writeus__title">Напишите нам</h2>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button" aria-label="Закрыть модальное окно">Закрыть</button>
   </header>
   <form class="modal-writeus__form" action="https://echo.htmlacademy.ru" method="post">
     <label class="modal-writeus__label" for="user-name">Ваше имя: </label>
-    <input class="modal-writeus__text-field" type="text" name="user-name" id="user-name" placeholder="Имя Фамилия"
+    <input class="modal-form__input-item" type="text" name="user-name" id="user-name" placeholder="Имя Фамилия"
            required aria-label="Поле ввода имени">
     <label class="modal-writeus__label" for="user-email">Ваш e-mail: </label>
-    <input class="modal-writeus__text-field" type="email" name="user-email" id="user-email"
+    <input class="modal-form__input-item" type="email" name="user-email" id="user-email"
            placeholder="email@example.com" required aria-label="Поле ввода email">
     <label class="modal-writeus__label" for="user-textarea">Текст письма: </label>
-    <textarea class="modal-writeus__textarea" name="user-letter" id="user-textarea" placeholder="В свободной форме"
-              rows="3" cols="40"></textarea>
-    <button class="button  modal-writeus__submit-button button--red" type="submit">Отправить</button>
+    <textarea class="modal-form__input-item" name="user-letter" id="user-textarea" placeholder="В свободной форме"
+              rows="3" cols="40" aria-label="Поле ввода текста письма"></textarea>
+    <button class="button  modal-writeus__submit-button button--red" type="submit" aria-label="Кнопка Отправить">Отправить</button>
   </form>
 </section>
 </body>
