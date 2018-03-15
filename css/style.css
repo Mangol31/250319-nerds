@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic');
-
+/*Основные стили */
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 400;
   color: #000000;
 }
@@ -16,40 +16,125 @@ a {
 
 .main-nav__list,
 .slider__list,
-.slider__switcher-list,
+.slider__switcher-list {
+  list-style-type: none;
+}
+
 .services__list,
 .about-company__rpart-list,
-.partner-logo__list,
-.footer__list,
-.left-menu__grid-list,
-.left-menu__features-list,
+.partner-logo__list {
+  list-style-type: none;
+}
+
+.filter__grid-list,
+.filter__features-list {
+  list-style-type: none;
+}
+
 .catalog__sort-menu-list,
 .catalog__list,
-.catalog__sort-ascdesc-list,
+.catalog__sort-ascdesc-list {
+  list-style-type: none;
+}
+
 .paginator__list {
   list-style-type: none;
 }
 
-/*Вот это закомментил, т.к. так и не смог придумать, как svg перекрашивать при получении ссылкой фокуса с клаиватуры. Мышкой просто - там курсок именно на svg наводится. А с клавиатуры - на ссылку*/
-/*.main-nav__logo:focus {*/
-/*outline: none;*/
-/*}*/
-.main-nav__logo svg {
-  fill: #000000;
+.footer__list {
+  list-style-type: none;
 }
 
-.main-nav__logo svg:hover,
-.main-nav__logo svg:focus {
-  fill: #303030;
+/*Основные блоки и их модификаторы*/
+.button {
+  /*height: 50px;*/
+  /*border-radius: 5px;*/
+  /*box-sizing: border-box;*/
+  line-height: 1.125;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
-.main-nav__logo svg:active {
-  fill: #a6a6a6;
+.button--red {
+  background-color: #fb565a;
+  border: none;
+}
+
+.button--red:focus,
+.button--red:hover {
+  background-color: #e74246;
+  outline: none;
+}
+
+.button--red:active {
+  background-color: #d7373b;
+}
+
+.button--green {
+  background-color: #00ca74;
+}
+
+.button--green:focus,
+.button--green:hover {
+  background-color: #00bc6c;
+}
+
+.button--green:active {
+  background-color: #00aa62;
+}
+
+.button--yellow {
+  background-color: #efc84a;
+}
+
+.button--yellow:focus,
+.button--yellow:hover {
+  background-color: #eab534;
+}
+
+.button--yellow:active {
+  background-color: #e5a722;
+}
+
+.button--grey {
+  background-color: #eeeeee;
+  color: #000000;
+  border: none;
+}
+
+.button--grey:focus,
+.button--grey:hover {
+  background-color: #dfdfdf;
+  border: none;
+  outline: none;
+}
+
+.button--grey:active {
+  background-color: #d5d5d5;
+  color: rgba(00, 00, 00, 0.3);
+  border: none;
+  outline: none;
+}
+
+.text--grey {
+  color: #666666;
+}
+
+/*Остальные блок*/
+.main-nav__logo-img:hover,
+.main-nav__logo-img:focus {
+  opacity: 0.8;
+}
+
+.main-nav__logo-img:active {
+  opacity: 0.3;
 }
 
 .main-nav__link,
 .main-header__cart-link {
-  line-height: 30px;
+  line-height: 2;
   font-weight: 500;
   color: #000000;
 }
@@ -77,46 +162,13 @@ a {
 
 .slider__slogan {
   font-size: 55px;
-  line-height: 55px;
+  line-height: 1;
   font-weight: 500;
-}
-
-.button {
-  /*height: 50px;*/
-  /*border-radius: 5px;*/
-  /*box-sizing: border-box;*/
-  line-height: 18px;
-  font-weight: 500;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.slider__button {
-  /*display: block;*/
-  /*width: 240px;*/
-  /*padding-top: 17px;*/
-  /*padding-bottom: 19px;*/
-}
-
-.button--red {
-  background-color: #fb565a;
-  border: none;
-}
-
-.button--red:focus,
-.button--red:hover {
-  background-color: #e74246;
-  outline: none;
-}
-
-.button--red:active {
-  background-color: #d7373b;
 }
 
 .services__title {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 1.25;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -126,34 +178,10 @@ a {
   /*padding-bottom: 19px;*/
 }
 
-.button--green {
-  background-color: #00ca74;
-}
-
-.button--green:hover {
-  background-color: #00bc6c;
-}
-
-.button--green:active {
-  background-color: #00aa62;
-}
-
-.button--yellow {
-  background-color: #efc84a;
-}
-
-.button--yellow:hover {
-  background-color: #eab534;
-}
-
-.button--yellow:active {
-  background-color: #e5a722;
-}
-
 .about-company__slogan,
 .modal-writeus__title {
   font-size: 45px;
-  line-height: 45px;
+  line-height: 1;
   font-weight: 500;
 }
 
@@ -174,30 +202,24 @@ a {
 
 .contacts__subtitle {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1.667;
   font-weight: 700;
 }
 
 .contacts__plain-text,
 .contacts__plain-text .contacts__tel {
-  line-height: 18px;
+  line-height: 1.125;
   font-style: normal;
-}
-
-.text--grey {
-  color: #666666;
 }
 
 .footer__slogan {
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   font-weight: 700;
 }
 
-.footer__slogan--plain-text {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
+.footer__discount-text {
+  line-height: 1.375;
 }
 
 .footer__social-button {
@@ -219,7 +241,7 @@ a {
 }
 
 .modal-writeus__label {
-  line-height: 18px;
+  line-height: 1.125;
   font-weight: 700;
 }
 
@@ -239,62 +261,56 @@ a {
 }
 
 .modal-form__input-item {
-  line-height: 18px;
+  line-height: 1.125;
   border: 2px solid #d7dcde;
   color: rgba(68, 68, 68, 0.5);
 }
 
-.left-menu__fieldset {
+.filter__fieldset {
   border: none;
 }
 
-.left-menu__legend {
+.filter__legend {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1.667;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.left-menu__cost-label {
-  line-height: 22px;
+.filter__cost-label {
+  line-height: 1.375;
   color: #283136;
   text-transform: uppercase;
 }
 
-.left-menu__range-bounds {
+.filter__range-bounds {
   border: 1px solid #eeeeee;
   background-color: #eeeeee;
 }
 
-/*.left-menu__grid-radiobutton:focus,*/
-/*.left-menu__features-checkbox:focus {*/
+/*.filter__grid-radiobutton:focus,*/
+/*.filter__features-checkbox:focus {*/
 /*outline:none;*/
 /*}*/
 
-.left-menu__grid-radiobutton:hover,
-.left-menu__features-checkbox:hover,
-.left-menu__grid-label:hover,
-.left-menu__features-label:hover {
+.filter__grid-radiobutton:hover,
+.filter__features-checkbox:hover,
+.filter__grid-label:hover,
+.filter__features-label:hover {
   color: #000000;
-  line-height: 20px;
+  line-height: 1.25;
 }
 
-.left-menu__grid-label:disabled,
-.left-menu__features-label:disabled {
+.filter__grid-label:disabled,
+.filter__features-label:disabled {
   color: rgba(00, 00, 00, 0.3);
 }
 
-.left-menu__grid-radiobutton,
-.left-menu__features-checkbox,
-.left-menu__grid-label,
-.left-menu__features-label {
+.filter__grid-radiobutton,
+.filter__features-checkbox,
+.filter__grid-label,
+.filter__features-label {
   color: #283136;
-}
-
-.button--grey {
-  background-color: #eeeeee;
-  border: none;
-  color: #000000;
 }
 
 .catalog__sort-menu-subtitle {
@@ -306,7 +322,7 @@ a {
 
 .catalog__sort-menu-link,
 .catalog__sort-ascdesc-link {
-  line-height: 18px;
+  line-height: 1.125;
   color: rgba(00, 00, 00, 0.3);
   text-transform: uppercase;
 }
@@ -325,15 +341,15 @@ a {
   color: rgba(00, 00, 00, 0.6);
 }
 
-.product-card__pricetag-modal-window-link {
+.product-card__pricetag-link {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1.667;
   font-weight: 700;
   color: #000000;
 }
 
 .product-card__pricetag-plain-text {
-  line-height: 18px;
+  line-height: 1.125;
 }
 
 /*.paginator__item {*/
@@ -345,7 +361,7 @@ a {
 /*}*/
 
 .paginator__link {
-  line-height: 18px;
+  line-height: 1.125;
   font-weight: 500;
   text-align: center;
   color: #000000;
@@ -355,7 +371,7 @@ a {
 }
 
 .paginator__link:hover {
-  line-height: 18px;
+  line-height: 1.125;
   font-weight: 500;
   text-align: center;
   color: #000000;
@@ -365,7 +381,7 @@ a {
 }
 
 .paginator__link:focus {
-  line-height: 18px;
+  line-height: 1.125;
   font-weight: 500;
   text-align: center;
   color: #000000;
