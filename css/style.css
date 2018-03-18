@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic');
 /*Основные стили */
+* {
+  padding: 0;
+  margin: 0
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,48 +13,50 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: #000000;
+
 }
 
 a {
   text-decoration: none;
 }
 
-.main-nav__list,
+.main-header-nav__list,
 .slider__list,
 .slider__switcher-list {
-  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
 }
 
 .services__list,
 .about-company__rpart-list,
 .partner-logo__list {
-  list-style-type: none;
+  list-style: none;
 }
 
 .filter__grid-list,
 .filter__features-list {
-  list-style-type: none;
+  list-style: none;
 }
 
 .catalog__sort-menu-list,
 .catalog__list,
 .catalog__sort-ascdesc-list {
-  list-style-type: none;
+  list-style: none;
 }
 
 .paginator__list {
-  list-style-type: none;
+  list-style: none;
 }
 
 .footer__list {
-  list-style-type: none;
+  list-style: none;
 }
 
 /*Основные блоки и их модификаторы*/
 .button {
-  /*height: 50px;*/
-  /*border-radius: 5px;*/
-  /*box-sizing: border-box;*/
+  min-height: 50px;
+  border-radius: 3px;
+  box-sizing: border-box;
   line-height: 1.125;
   font-weight: 500;
   text-align: center;
@@ -122,48 +129,170 @@ a {
   color: #666666;
 }
 
-/*Остальные блок*/
-.main-nav__logo-img:hover,
-.main-nav__logo-img:focus {
-  opacity: 0.8;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  font-size: 0;
 }
 
-.main-nav__logo-img:active {
-  opacity: 0.3;
+/*Блоки сетки*/
+.outline22 { /*TODO Убрать потом*/
+  outline: 1px solid red;
 }
 
-.main-nav__link,
-.main-header__cart-link {
-  line-height: 2;
-  font-weight: 500;
-  color: #000000;
+.outline23 { /*TODO Убрать потом*/
+  outline: 1px solid blue;
+}
+
+.outline24 { /*TODO Убрать потом*/
+  outline: 1px solid green;
 }
 
 .main-header {
+  width: 1440px;
+  margin: 0 auto;
   background-color: #eeeeee;
+  padding-top: 49px;
 }
 
-.main-nav__link:hover,
+.main-header-nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 140px;
+  /*margin-bottom: 64px;*/
+}
+
+.main-header-nav {
+  width: 800px;
+  display: flex;
+  margin-right: 245px;
+}
+
+.main-header-nav__list {
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 0;
+}
+
+.main-header__cart-container {
+  width: 115px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.slider {
+  padding-left: 140px;
+}
+
+.slider__item {
+  min-height: 355px;
+  padding-top: 78px;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.slider__item--first-slide {
+  background-image: url("../img/slide1.png");
+  background-position: 430px 19px;
+}
+
+.slider__item--second-slide {
+  background-image: url("../img/slide2.png");
+  background-position: 495px 0;
+}
+.slider__item--third-slide {
+  background-image: url("../img/slide3.png");
+  background-position: 400px 20px;
+}
+
+
+.slider__button {
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Остальные блоки*/
+.main-header-nav__logo-img {
+  margin-right: 200px;
+}
+
+.main-header-nav__logo-img:hover,
+.main-header-nav__logo-img:focus {
+  opacity: 0.8;
+}
+
+.main-header-nav__logo-img:active {
+  opacity: 0.3;
+}
+
+.main-header-nav__link,
+.main-header__cart-link {
+  line-height: 1.875;
+  font-weight: 500;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.main-header-nav__link:hover,
 .main-header__cart-link:hover,
-.main-nav__link:focus,
+.main-header-nav__link:focus,
 .main-header__cart-link:focus {
   color: #fb565a;
   outline: none;
 }
 
-.main-nav__link:active,
+.main-header-nav__link:active,
 .main-header__cart-link:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-nav__link--active {
+.main-header-nav__link--active {
   border-bottom: 2px solid #fb565a;
 }
 
 .slider__slogan {
   font-size: 55px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 400;
+  margin-bottom: 27px;
+}
+
+.slider__slogan--first-slide {
+  width: 380px;
+}
+.slider__slogan--second-slide {
+  width: 515px;
+}
+
+.slider__slogan--third-slide {
+  width: 410px;
+}
+
+.slider__plain-text {
+  margin-bottom: 40px;
+}
+.slider__plain-text--first-slide {
+  width: 368px;
+}
+.slider__plain-text--second-slide {
+  width: 435px;
+}
+.slider__plain-text--third-slide {
+  width: 370px;
 }
 
 .services__title {
