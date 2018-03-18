@@ -2,7 +2,7 @@
 /*Основные стили */
 * {
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 body {
@@ -154,13 +154,28 @@ a {
   outline: 1px solid green;
 }
 
-.main-header {
+.external-container {
+  width: 100%;
+}
+.external-container--header {
+  background-color: #eeeeee;
+}
+.internal-container {
   width: 1440px;
   margin: 0 auto;
-  background-color: #eeeeee;
+}
+
+.internal-container--header {
   padding-top: 49px;
 }
 
+.external-container--main {
+  background-color: #ffffff;
+}
+
+/*.internal-container--main {*/
+
+/*}*/
 .main-header-nav-container {
   display: flex;
   flex-direction: row;
@@ -195,6 +210,7 @@ a {
 
 .slider {
   padding-left: 140px;
+  padding-right: 140px;
 }
 
 .slider__item {
@@ -203,6 +219,7 @@ a {
   background-size: auto;
   background-repeat: no-repeat;
 }
+
 .slider__item--first-slide {
   background-image: url("../img/slide1.png");
   background-position: 430px 19px;
@@ -212,11 +229,11 @@ a {
   background-image: url("../img/slide2.png");
   background-position: 495px 0;
 }
+
 .slider__item--third-slide {
   background-image: url("../img/slide3.png");
   background-position: 400px 20px;
 }
-
 
 .slider__button {
   width: 240px;
@@ -225,6 +242,29 @@ a {
   align-items: center;
 }
 
+
+.services {
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+.services__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.services__item {
+  width: 300px;
+  margin-right: 100px;
+  padding-top: 79px;
+}
+.services__icon {
+  margin-bottom: 19px;
+}
+.services__list:last-child {
+  margin-right: 0;
+}
 /*Остальные блоки*/
 .main-header-nav__logo-img {
   margin-right: 200px;
@@ -274,6 +314,7 @@ a {
 .slider__slogan--first-slide {
   width: 380px;
 }
+
 .slider__slogan--second-slide {
   width: 515px;
 }
@@ -285,12 +326,15 @@ a {
 .slider__plain-text {
   margin-bottom: 40px;
 }
+
 .slider__plain-text--first-slide {
   width: 368px;
 }
+
 .slider__plain-text--second-slide {
   width: 435px;
 }
+
 .slider__plain-text--third-slide {
   width: 370px;
 }
@@ -300,11 +344,25 @@ a {
   line-height: 1.25;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
-
+.services__plain-text {
+  margin-bottom: 35px;
+}
+.services__plain-text--web {
+ width: 250px;
+}
+.services__plain-text--soft {
+   width: 250px;
+ }
+.services__plain-text--presentation {
+  width: 250px;
+}
 .services__button {
-  /*padding-top: 17px;*/
-  /*padding-bottom: 19px;*/
+width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-company__slogan,
