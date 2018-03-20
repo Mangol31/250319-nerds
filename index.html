@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="external-container external-container--header">
-  <div class="internal-container internal-container--header outline22">
+  <div class="internal-container internal-container--header">
     <h1 class="visually-hidden">Дизайн-студия Nёrds</h1>
     <div class="main-header-nav-container">
       <nav class="main-header-nav">
@@ -27,8 +27,12 @@
     </div>
     <section class="slider">
       <h2 class="visually-hidden">Слайдер</h2>
+      <!-- Тут так и не въехал, как слайды уложить в стопку один поверх другого при помощи z-indexa. Точнее это-то как раз просто. Но проблемы с позиционированием:
+      1) Слайд все равно выпадает из потока. Хотя продовал родителям давать relative
+      2) При absolute пропадает рисунок из фона.
+      Насколько я понимаю, использование "visually-hidden"+JS тоже вполне рабочая схема - просто меняем класс у лишки. Поэтому пока решил оставить так. -->
       <ul class="slider__list">
-        <li class="slider__item slider__item--first-slide visually-hidden">
+        <li class="slider__item slider__item--first-slide">
           <div class="slider-item">
             <p class="slider__slogan slider__slogan--first-slide">Долго, дорого, скрупулезно</p>
             <p class="slider__plain-text slider__plain-text--first-slide">Математически выверенный дизайн для вашего
@@ -45,7 +49,7 @@
             <a class="button slider__button button--red" href="#">Узнать больше</a>
           </div>
         </li>
-        <li class="slider__item slider__item--third-slide">
+        <li class="slider__item slider__item--third-slide visually-hidden">
           <div class="slider-item__content">
             <p class="slider__slogan slider__slogan--third-slide">Только ночь, только хардкор</p>
             <p class="slider__plain-text slider__plain-text--third-slide">Работать днем, как все? Мы против этого. Ближе
@@ -72,26 +76,29 @@
   </div>
 </header>
 <main class="external-container external-container--main">
-  <div class="internal-container internal-container--main outline22">
-    <section class="services outline23">
+  <div class="internal-container internal-container--main">
+    <section class="services">
       <h2 class="visually-hidden">Типы услуг</h2>
       <ul class="services__list">
-        <li class="services__item outline24">
+        <li class="services__item">
           <img class="services__icon" src="img/illustration-1.jpg" width="300" height="146" alt="Веб-сайты">
           <h3 class="services__title">Веб-сайты</h3>
-          <p class="services__plain-text services__plain-text--web">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <p class="services__plain-text services__plain-text--web">Мир никогда не будет прежним после того как увидит
+            ваш сайт!</p>
           <a class="button services__button button--red" href="#">Заказать</a>
         </li>
-        <li class="services__item outline24">
+        <li class="services__item">
           <img class="services__icon" src="img/illustration-2.jpg" width="300" height="146" alt="Мобильные приложения">
           <h3 class="services__title">Приложения</h3>
-          <p class="services__plain-text services__plain-text--soft">Покорите топ-10 приложений в AppStore и Google Play</p>
+          <p class="services__plain-text services__plain-text--soft">Покорите топ-10 приложений в AppStore и Google
+            Play</p>
           <a class="button services__button button--green" href="#">Заказать</a>
         </li>
-        <li class="services__item outline24">
+        <li class="services__item">
           <img class="services__icon" src="img/illustration-3.jpg" width="300" height="146" alt="Презентации">
           <h3 class="services__title">Презентации</h3>
-          <p class="services__plain-text services__plain-text--presentation">Вы даже не подозреваете, насколько вы изумительны!</p>
+          <p class="services__plain-text services__plain-text--presentation">Вы даже не подозреваете, насколько вы
+            изумительны!</p>
           <a class="button services__button button--yellow" href="#">Заказать</a>
         </li>
       </ul>
@@ -99,11 +106,11 @@
     <section class="about-company">
       <h2 class="visually-hidden">О нас</h2>
       <div class="about-company__left-part">
-        <b class="about-company__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
+        <p class="about-company__slogan ">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
         <p class="about-company__plain-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
           превыше креатива. Работаем не покладая
           рук, как роботы.</p>
-        <b class="about-company__subtitle">Выполняем заказы на разработку:</b>
+        <p class="about-company__subtitle about-company__subtitle--lpart">Выполняем заказы на разработку:</p>
         <ul class="about-company__lpart-list">
           <li class="about-company__lpart-item">Веб-сайтов любой сложности</li>
           <li class="about-company__lpart-item">Мобильных приложений для iOS и Android</li>
@@ -111,60 +118,63 @@
         </ul>
       </div>
       <div class="about-company__right-part">
-        <img src="img/studio-nerds.png" width="360" height="208" alt="Дизайн-студия Nerds">
-        <b class="about-company__subtitle about-company__subtitle--centered-condensed">с 2004 года Любим точность во
-          всем:</b>
+        <img class="about-company__nerds-img" src="img/studio-nerds.png" width="360" height="208"
+             alt="Дизайн-студия Nerds">
+        <p class="about-company__subtitle about-company__subtitle--rpart centered">с 2004 года Любим точность во
+          всем:</p>
         <ul class="about-company__rpart-list">
           <li class="about-company__rpart-item">
-            <b class="about-company__percents">146<sup>%</sup></b>
-            <p class="about-company__plain-text">Уровень самоотдачи</p>
+            <b class="about-company__percents centered">146<sup>%</sup></b>
+            <p class="about-company__percents-text">Уровень самоотдачи</p>
           </li>
           <li class="about-company__rpart-item">
-            <b class="about-company__percents">100<sup>%</sup></b>
-            <p class="about-company__plain-text">Соблюдение сроков</p>
+            <b class="about-company__percents centered">100<sup>%</sup></b>
+            <p class="about-company__percents-text">Соблюдение сроков</p>
           </li>
           <li class="about-company__rpart-item">
-            <b class="about-company__percents">50<sup>%</sup></b>
-            <p class="about-company__plain-text">Минимальная предоплата</p>
+            <b class="about-company__percents centered">50<sup>%</sup></b>
+            <p class="about-company__percents-text">Минимальная предоплата</p>
           </li>
         </ul>
       </div>
     </section>
-    <section class="parnter-logo">
-      <h2 class="visually-hidden">Ссылки на партнерские сайты</h2>
-      <ul class="partner-logo__list">
-        <li class="partner-logo__item">
-          <a class="partner-logo__link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="partner-logo__pict" src="img/logo-1.png" width="199" height="68" alt="Сайт HTML Academy">
-          </a>
-        </li>
-        <li class="partner-logo__item">
-          <a class="partner-logo__link" href="#">
-            <img class="partner-logo__pict" src="img/logo-2.png" width="209" height="90"
-                 alt="Сайт Barbershop Borodinski">
-          </a>
-        </li>
-        <li class="partner-logo__item">
-          <a class="partner-logo__link" href="#">
-            <img class="partner-logo__pict" src="img/logo-3.png" width="185" height="52" alt="Сайт Pink">
-          </a>
-        </li>
-        <li class="partner-logo__item">
-          <a class="partner-logo__link" href="#">
-            <img class="partner-logo__pict" src="img/logo-4.png" width="173" height="84" alt="Сайт Mishka">
-          </a>
-        </li>
-      </ul>
-    </section>
+    <div class="internal-container">
+      <section class="partner-logo">
+        <h2 class="visually-hidden">Ссылки на партнерские сайты</h2>
+        <ul class="partner-logo__list">
+          <li class="partner-logo__item">
+            <a class="partner-logo__link" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img class="partner-logo__pict" src="img/logo-1.png" width="199" height="68" alt="Сайт HTML Academy">
+            </a>
+          </li>
+          <li class="partner-logo__item">
+            <a class="partner-logo__link" href="#">
+              <img class="partner-logo__pict" src="img/logo-2.png" width="209" height="90"
+                   alt="Сайт Barbershop Borodinski">
+            </a>
+          </li>
+          <li class="partner-logo__item">
+            <a class="partner-logo__link" href="#">
+              <img class="partner-logo__pict" src="img/logo-3.png" width="185" height="52" alt="Сайт Pink">
+            </a>
+          </li>
+          <li class="partner-logo__item">
+            <a class="partner-logo__link" href="#">
+              <img class="partner-logo__pict" src="img/logo-4.png" width="173" height="84" alt="Сайт Mishka">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
     <section class="contacts">
       <h2 class="visually-hidden">Как с нами связаться</h2>
       <img class="contacts__map" src="img/map.jpg" width="1440" height="416"
            alt="Адрес дизайн-студии 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       <div class="contacts__requisites">
         <p class="contacts__subtitle">NЁRDS DESIGN STUDIO</p>
-        <address class="contacts__plain-text text--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-        <p class="contacts__plain-text text--grey">тел.&nbsp;<a class="contacts__tel text--grey"
-                                                                href="tel:+78122757575">+7
+        <address class="contacts__address-text text--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        <p class="contacts__tel-text text--grey">тел.&nbsp;<a class="contacts__tel text--grey"
+                                                              href="tel:+78122757575">+7
           (812)
           275-75-75</a></p>
         <a class="button contacts__button button--red" href="#">Напишите нам</a>
@@ -172,41 +182,54 @@
     </section>
   </div>
 </main>
-<footer class="footer">
-  <ul class="footer__list">
-    <li class="footer__item">
-      <a class="footer__social-button" href="#">ВКонтакте</a>
-    </li>
-    <li class="footer__item">
-      <a class="footer__social-button" href="#">Facebook</a>
-    </li>
-    <li class="footer__item">
-      <a class="footer__social-button" href="#">Instagram</a>
-    </li>
-  </ul>
-  <b class="footer__slogan">Давайте дружить, это выгодно!</b>
-  <span class="footer__discount-text">Скидка 10% для друзей из социальных сетей.</span>
-</footer>
+<div class="internal-container">
+  <footer class="footer">
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a class="footer__social-button footer__social-button--vk" href="#" aria-label="ВКонтакте"></a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__social-button footer__social-button--fb" href="#" aria-label="Facebook"></a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__social-button footer__social-button--insta" href="#" aria-label="Instagram"></a>
+      </li>
+    </ul>
+    <div class="footer__slogan-container">
+      <b class="footer__slogan">Давайте дружить, это выгодно!</b>
+      <span class="footer__discount-text">Скидка 10% для друзей из социальных сетей.
+    </span>
+    </div>
+  </footer>
+</div>
 <!-- Модальное окно при нажатии кнопки "Напишите нам" -->
-<section class="modal-writeus">
-  <header class="modal-writeus__header">
-    <h2 class="modal-writeus__title">Напишите нам</h2>
-    <button class="modal-close" type="button" aria-label="Закрыть модальное окно"></button>
-  </header>
-  <form class="modal-writeus__form" action="https://echo.htmlacademy.ru" method="post">
-    <label class="modal-writeus__label" for="user-name">Ваше имя: </label>
-    <input class="modal-form__input-item" type="text" name="user-name" id="user-name" placeholder="Имя Фамилия"
-           required aria-label="Поле ввода имени">
-    <label class="modal-writeus__label" for="user-email">Ваш e-mail: </label>
-    <input class="modal-form__input-item" type="email" name="user-email" id="user-email"
-           placeholder="email@example.com" required aria-label="Поле ввода email">
-    <label class="modal-writeus__label" for="user-textarea">Текст письма: </label>
-    <textarea class="modal-form__input-item" name="user-letter" id="user-textarea" placeholder="В свободной форме"
-              rows="3" cols="40" aria-label="Поле ввода текста письма"></textarea>
-    <button class="button  modal-writeus__submit-button button--red" type="submit">
-      Отправить
-    </button>
-  </form>
-</section>
+<div class="modal-window-container">
+  <section class="modal-writeus">
+    <header class="modal-writeus__header">
+      <h2 class="modal-writeus__title">Напишите нам</h2>
+      <button class="modal-close-button" type="button" aria-label="Закрыть модальное окно"></button>
+    </header>
+    <form class="modal-writeus__form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="modal-writeus__form-internal-container">
+        <p class="modal-writeus__form-item">
+          <label class="modal-writeus__label" for="user-name">Ваше имя: </label>
+          <input class="modal-form__input-item" type="text" name="user-name" id="user-name" placeholder="Имя Фамилия"
+                 required aria-label="Поле ввода имени">
+        </p>
+        <p class="modal-writeus__form-item">
+          <label class="modal-writeus__label" for="user-email">Ваш e-mail: </label>
+          <input class="modal-form__input-item" type="email" name="user-email" id="user-email"
+                 placeholder="email@example.com" required aria-label="Поле ввода email">
+        </p>
+        <label class="modal-writeus__label" for="user-textarea">Текст письма: </label>
+        <textarea class="modal-form__text-area" name="user-letter" id="user-textarea" placeholder="В свободной форме"
+                  rows="3" cols="40" aria-label="Поле ввода текста письма"></textarea>
+      </div>
+      <button class="button  modal-writeus__submit-button button--red" type="submit">
+        Отправить
+      </button>
+    </form>
+  </section>
+</div>
 </body>
 </html>
