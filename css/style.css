@@ -68,8 +68,15 @@ a {
 
 /*Основные блоки и их модификаторы*/
 /*TODO В IE11 надпись у кнопок уезжает вверх. Разобраться*/
+/*TODO Надо сделать надписи туснеющими при нажатии. забыл*/
 .button {
-  min-height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 47px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   border-radius: 3px;
   box-sizing: border-box;
   line-height: 1.125;
@@ -81,43 +88,57 @@ a {
 
 .button--red {
   background-color: #fb565a;
-  border: none;
+  border-top: 3px solid #fb565a;
+  /*border: none;*/
+  /*box-shadow: inset 0 0 0 3px #c13135;*/
 }
 
 .button--red:focus,
 .button--red:hover {
   background-color: #e74246;
+  border-top: 3px solid #e74246;
   outline: none;
 }
 
 .button--red:active {
   background-color: #d7373b;
+  border-top: 3px solid #c13135;
+  /*min-height: 47px;*/
+
 }
 
 .button--green {
   background-color: #00ca74;
+  border-top: 3px solid #00ca74;
 }
 
 .button--green:focus,
 .button--green:hover {
   background-color: #00bc6c;
+  border-top: 3px solid #00bc6c;
+  outline: none;
 }
 
 .button--green:active {
   background-color: #00aa62;
+  border-top: 3px solid #009958;
 }
 
 .button--yellow {
   background-color: #efc84a;
+  border-top: 3px solid #efc84a;
 }
 
 .button--yellow:focus,
 .button--yellow:hover {
   background-color: #eab534;
+  border-top: 3px solid #eab534;
+  outline: none;
 }
 
 .button--yellow:active {
   background-color: #e5a722;
+  border-top: 3px solid #ce961f;
 }
 
 .button--grey {
@@ -169,20 +190,25 @@ a {
   outline: 1px solid green;
 }
 
-.external-container {
-  width: 100%;
+.main-header {
+  background-color: #eeeeee;
 }
 
 .external-container--header {
   background-color: #eeeeee;
 }
 
-.internal-container {
-  width: 1440px;
+.main {
+  width: 1200px;
   margin: 0 auto;
 }
 
-.internal-container--header {
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.container--header {
   padding-top: 49px;
   background-color: #eeeeee;
 }
@@ -197,21 +223,35 @@ a {
 .main-header-nav-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  padding-left: 140px;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-header-nav__item {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.main-header-nav__item:last-child {
+  margin-right: 0;
+}
+
+.main-header-nav__item:first-child {
+  margin-left: 0;
 }
 
 .main-header-nav {
-  width: 800px;
   display: flex;
-  margin-right: 245px;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .main-header-nav__list {
-  width: 440px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   padding-top: 15px;
   padding-left: 0;
 }
@@ -223,14 +263,11 @@ a {
   justify-content: flex-end;
   align-items: center;
   padding-top: 15px;
-  background-image: url("../img/cart-icon.svg");
-  background-repeat: no-repeat;
-  background-position: left 32px;
 }
 
 .slider {
-  padding-left: 140px;
-  padding-right: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .slider__item {
@@ -259,9 +296,8 @@ a {
 
 .slider__button {
   width: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 80px;
+
 }
 
 /*Остальные блоки*/
@@ -269,12 +305,12 @@ a {
   margin-right: 200px;
 }
 
-.main-header-nav__logo-img:hover,
-.main-header-nav__logo-img:focus {
+.main-header-nav__logo-img--catalog:hover,
+.main-header-nav__logo-img--catalog:focus {
   opacity: 0.8;
 }
 
-.main-header-nav__logo-img:active {
+.main-header-nav__logo-img--catalog:active {
   opacity: 0.3;
 }
 
@@ -297,6 +333,22 @@ a {
 .main-header-nav__link:active,
 .main-header__cart-link:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header__cart-link {
+  position: relative;
+}
+
+.main-header__cart-link::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 6px;
+  left: -39px;
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .main-header-nav__link--active {
@@ -339,8 +391,8 @@ a {
 }
 
 .services {
-  padding-left: 140px;
-  padding-right: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .services__list {
@@ -391,14 +443,11 @@ a {
 .services__button {
   width: 160px;
   margin-bottom: 78px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .about-company {
-  padding-left: 140px;
-  padding-right: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -426,8 +475,19 @@ a {
 
 .about-company__lpart-item {
   text-indent: 36px;
-  background: url("../img/list-symbol.png") no-repeat left center;
   margin-bottom: 24px;
+  position: relative;
+}
+
+.about-company__lpart-item::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+  top: 10px;
+  left: 1px;
 }
 
 .about-company__lpart-list:last-child {
@@ -453,7 +513,7 @@ a {
 }
 
 .about-company__subtitle--rpart {
-  margin-bottom: 57px;
+  margin-bottom: 40px;
 }
 
 .centered {
@@ -476,7 +536,7 @@ a {
 
 .about-company__percents {
   font-size: 45px;
-  line-height: 10px;
+  line-height: 1;
   font-weight: 700;
 }
 
@@ -491,8 +551,9 @@ a {
 }
 
 .partner-logo {
-  padding-left: 140px;
-  padding-right: 140px;
+  /*width: 100px;*/
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 80px;
 }
 
@@ -500,30 +561,28 @@ a {
   padding-top: 46px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
 }
 
 .partner-logo__item {
   position: relative;
-  width: 300px;
+  width: 297px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 36px;
+  margin-bottom: 42px;
 }
 
 .partner-logo__item:first-child {
-  justify-content: flex-start;
-  width: 250px;
-  margin-left: 30px;
+  width: 282px;
 }
 
 .partner-logo__item:last-child {
-  width: 250px;
-  margin-left: 25px;
+  width: 280px;
+
 }
 
 .partner-logo__item:not(:last-child)::after {
@@ -550,20 +609,43 @@ a {
   opacity: 0.1;
 }
 
+.partner-logo__pict {
+  display: block;
+}
+
+/*Крайние справа/слева лого партнеров позиционирую отдельно. Т.к. рисунки все разной ширины. Просто так в PP не попадешь*/
+.partner-logo__pict--left-logo {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
+.partner-logo__pict--right-logo {
+  position: absolute;
+  top: 4px;
+  left: 64px;
+}
+
 .contacts {
+  display: block;
+  text-align: center;
+}
+
+.container--contacts {
   position: relative;
 }
 
 .contacts__requisites {
   width: 319px;
-  height: 308px;
   position: absolute;
-  top: 54px;
-  left: 140px;
+  top: 52px;
+  left: 22px;
   background-color: #ffffff;
   padding-top: 50px;
   padding-left: 50px;
+  padding-right: 50px;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .contacts__subtitle {
@@ -585,19 +667,22 @@ a {
 }
 
 .contacts__tel-text {
-  margin-bottom: 33px;
+  margin-bottom: 35px;
 }
 
 .contacts__button {
   width: 219px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 47px;
+  display: inline-block;
+}
+
+.contacts_map {
+  margin-bottom: 62px;
 }
 
 .footer {
-  padding-left: 140px;
-  padding-right: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -653,12 +738,6 @@ a {
 .footer__social-button--vk:active::before {
   opacity: 0.3;
 }
-
-/*.footer__social-button--fb {*/
-/*background-image: url("../img/fb-icon.svg");*/
-/*background-repeat: no-repeat;*/
-/*background-position: center center;*/
-/*}*/
 
 .footer__social-button--fb::before {
   content: "";
