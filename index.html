@@ -8,9 +8,9 @@
 </head>
 <body>
 <header class="main-header">
-  <div class="container container--header">
+  <div class="container">
     <h1 class="visually-hidden">Дизайн-студия Nёrds</h1>
-    <div class="main-header-nav-container">
+    <div class="main-header-nav-container double--padding">
       <nav class="main-header-nav">
         <img class="main-header-nav__logo-img" src="img/nerds-logo.svg" width="160" height="65"
              alt="Логотип Nёrds">
@@ -19,13 +19,14 @@
           <li class="main-header-nav__item"><a class="main-header-nav__link" href="#">Клиенты</a></li>
           <li class="main-header-nav__item"><a class="main-header-nav__link" href="catalog.html">Магазин</a></li>
           <li class="main-header-nav__item"><a class="main-header-nav__link" href="#">Контакты</a></li>
+
         </ul>
       </nav>
       <div class="main-header__cart-container">
         <a class="main-header__cart-link" href="#">Корзина</a>
       </div>
     </div>
-    <section class="slider">
+    <section class="slider double--padding">
       <h2 class="visually-hidden">Слайдер</h2>
       <!-- Тут так и не въехал, как слайды уложить в стопку один поверх другого при помощи z-indexa. Точнее это-то как раз просто. Но проблемы с позиционированием:
       1) Слайд все равно выпадает из потока. Хотя продовал родителям давать relative
@@ -33,7 +34,7 @@
       Насколько я понимаю, использование "visually-hidden"+JS тоже вполне рабочая схема - просто меняем класс у лишки. Поэтому пока решил оставить так. -->
       <ul class="slider__list">
         <li class="slider__item slider__item--first-slide">
-          <p class="slider__slogan slider__slogan--first-slide">Долго, дорого, скрупулезно</p>
+          <p class="slider__slogan slider__slogan--first-slide">Долго, дорого, скрупулезно.</p>
           <p class="slider__plain-text slider__plain-text--first-slide">Математически выверенный дизайн для вашего
             сайта или мобильного приложения.</p>
           <a class="button slider__button button--red" href="#">Узнать больше</a>
@@ -70,7 +71,8 @@
   </div>
 </header>
 <main class="main">
-  <section class="services">
+  <div class="container">
+  <section class="services double--padding">
     <h2 class="visually-hidden">Типы услуг</h2>
     <ul class="services__list">
       <li class="services__item">
@@ -96,7 +98,7 @@
       </li>
     </ul>
   </section>
-  <section class="about-company">
+  <section class="about-company double--padding">
     <h2 class="visually-hidden">О нас</h2>
     <div class="about-company__left-part">
       <p class="about-company__slogan ">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
@@ -131,12 +133,12 @@
       </ul>
     </div>
   </section>
-  <section class="partner-logo">
+  <section class="partner-logo double--padding">
     <h2 class="visually-hidden">Ссылки на партнерские сайты</h2>
     <ul class="partner-logo__list">
       <li class="partner-logo__item">
         <a class="partner-logo__link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img class="partner-logo__pict partner-logo__pict--left-logo" src="img/logo-1.png" width="199" height="68"
+          <img class="partner-logo__pict" src="img/logo-1.png" width="199" height="68"
                alt="Сайт HTML Academy">
         </a>
       </li>
@@ -153,30 +155,31 @@
       </li>
       <li class="partner-logo__item">
         <a class="partner-logo__link" href="#">
-          <img class="partner-logo__pict partner-logo__pict--right-logo" src="img/logo-4.png" width="173" height="84"
+          <img class="partner-logo__pict" src="img/logo-4.png" width="173" height="84"
                alt="Сайт Mishka">
         </a>
       </li>
     </ul>
   </section>
-</main>
-<section class="contacts">
-  <h2 class="visually-hidden">Как с нами связаться</h2>
-  <div class="container container--contacts">
-    <div class="contacts__requisites">
-      <p class="contacts__subtitle">NЁRDS DESIGN STUDIO</p>
-      <address class="contacts__address-text text--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-      <p class="contacts__tel-text text--grey">тел.&nbsp;<a class="contacts__tel text--grey"
-                                                            href="tel:+78122757575">+7&nbsp;(812)&nbsp;275-75-75</a></p>
-      <a class="button contacts__button button--red" href="#">Напишите нам</a>
-    </div>
   </div>
-  <img class="contacts_map" src="img/map.jpg" width="1440" height="416"
-       alt="Адрес дизайн-студии 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-</section>
+  <section class="contacts">
+    <h2 class="visually-hidden">Как с нами связаться</h2>
+    <div class="container container--contacts">
+      <div class="contacts__requisites">
+        <p class="contacts__subtitle">NЁRDS DESIGN STUDIO</p>
+        <address class="contacts__address-text text--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        <p class="contacts__tel-text text--grey">тел.&nbsp;<a class="contacts__tel text--grey"
+                                                              href="tel:+78122757575">+7&nbsp;(812)&nbsp;275-75-75</a></p>
+        <a class="button contacts__button button--red" href="#">Напишите нам</a>
+      </div>
+    </div>
+    <!--<img class="contacts_map" src="img/map.jpg" width="1440" height="416"-->
+         <!--alt="Адрес дизайн-студии 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">-->
+  </section>
+</main>
 
 <div class="container">
-  <footer class="footer">
+  <footer class="footer double--padding">
     <ul class="footer__list">
       <li class="footer__item">
         <a class="footer__social-button footer__social-button--vk" href="#" aria-label="ВКонтакте"></a>
