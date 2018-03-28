@@ -31,8 +31,9 @@
     <h1 class="main-header__catalog-slogan container--padding">Магазин готовых шаблонов</h1>
   </div>
 </header>
-<div class="container double--padding">
-  <main class="main">
+
+<main class="main outline23">
+  <div class="container double--padding">
     <div class="container  filter-catalog-wrapper">
 
       <aside class="filter outline22">
@@ -244,36 +245,41 @@
             </article>
           </li>
         </ul>
-        <div class="paginator double--padding">
-          <ul class="paginator__list">
-            <li class="paginator__item"><a class="paginator__link paginator__link--active" href="#">1</a></li>
-            <li class="paginator__item"><a class="paginator__link" href="#">2</a></li>
-            <li class="paginator__item"><a class="paginator__link" href="#">3</a></li>
-          </ul>
-          <div class="paginator__next">
-            <a class="paginator__link" href="#">Следующая</a>
-          </div>
-        </div>
+        <!--<div class="paginator double--padding">-->
+        <ul class="paginator__list">
+          <li class="paginator__item"><a class="paginator__link link--current" href="#">1</a></li>
+          <li class="paginator__item"><a class="paginator__link" href="#">2</a></li>
+          <li class="paginator__item"><a class="paginator__link" href="#">3</a></li>
+          <li class="paginator__item">
+            <a class="paginator__link link--next" href="#">Следующая</a>
+          </li>
+        </ul>
+        <!--<div class="paginator__next">-->
+        <!--<a class="paginator__link" href="#"></a>-->
+        <!--</div>-->
+        <!--</div>-->
       </section>
     </div>
-    <section class="contacts">
-      <h2 class="visually-hidden">Как с нами связаться</h2>
-      <div class="container container--contacts">
-        <div class="contacts__requisites">
-          <p class="contacts__subtitle">NЁRDS DESIGN STUDIO</p>
-          <address class="contacts__address-text text--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          </address>
-          <p class="contacts__tel-text text--grey">тел.&nbsp;<a class="contacts__tel text--grey"
-                                                                href="tel:+78122757575">+7&nbsp;(812)&nbsp;275-75-75</a>
-          </p>
-          <a class="button contacts__button button--red" href="#">Напишите нам</a>
-        </div>
+
+  </div>
+  <section class="contacts outline24">
+    <h2 class="visually-hidden">Как с нами связаться</h2>
+    <div class="container container--contacts">
+      <div class="contacts__requisites">
+        <p class="contacts__subtitle">NЁRDS DESIGN STUDIO</p>
+        <address class="contacts__address-text text--grey">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </address>
+        <p class="contacts__tel-text text--grey">тел.&nbsp;<a class="contacts__tel text--grey"
+                                                              href="tel:+78122757575">+7&nbsp;(812)&nbsp;275-75-75</a>
+        </p>
+        <a class="button contacts__button button--red" href="#">Напишите нам</a>
       </div>
-      <!--<img class="contacts_map" src="img/map.jpg" width="1440" height="416"-->
-      <!--alt="Адрес дизайн-студии 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">-->
-    </section>
-  </main>
-</div>
+    </div>
+    <!--<img class="contacts_map" src="img/map.jpg" width="1440" height="416"-->
+    <!--alt="Адрес дизайн-студии 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">-->
+  </section>
+</main>
+
 <div class="container">
   <footer class="footer double--padding">
     <ul class="footer__list">
