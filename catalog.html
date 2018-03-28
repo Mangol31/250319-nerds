@@ -32,11 +32,11 @@
   </div>
 </header>
 
-<main class="main outline23">
+<main class="main">
   <div class="container double--padding">
     <div class="container  filter-catalog-wrapper">
 
-      <aside class="filter outline22">
+      <aside class="filter">
         <h2 class="visually-hidden">Меню выбора</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="filter-form__range-item">
@@ -44,7 +44,7 @@
             <div class="filter-form__range">
               <div class="filter-form__range-controls">
                 <div class="filter-form__scale">
-                  <div class="filter-form__bar" style="margin-left: 0%; width: 70%"></div>
+                  <div class="filter-form__bar" style="margin-left: 0; width: 70%"></div>
                 </div>
                 <div class="filter-form__toggle toggle--min"></div>
                 <div class="filter-form__toggle toggle--max"></div>
@@ -120,7 +120,7 @@
           <button class="button filter-form__button button--grey" type="submit">Показать</button>
         </form>
       </aside>
-      <section class="catalog outline22">
+      <section class="catalog">
         <h2 class="visually-hidden">Каталог шаблонов</h2>
         <div class="catalog__sort-menu double--padding">
           <p class="catalog__sort-menu-subtitle">Сортировать:</p>
@@ -135,14 +135,16 @@
               <a class="catalog__sort-menu-link" href="#">По названию</a>
             </li>
           </ul>
-          <ul class="catalog__sort-ascdesc-list">
-            <li class="catalog__sort-ascdesc-item">
-              <a class="catalog__sort-ascdesc-link catalog__sort-ascdesc-link--asc catalog__sort-ascdesc-link--active"
-                 href="#" aria-label="Сортировка по убыванию"></a>
+          <ul class="catalog__sort-updown-list">
+            <li class="catalog__sort-updown-item">
+              <input class="catalog__sort-updown-radiobutton visually-hidden" type="radio" name="updown" value="down"
+                     id="down" checked>
+              <label class="catalog__sort-updown-label" for="down"><span class="visually-hidden">Сортировка по убыванию</span></label>
             </li>
-            <li class="catalog__sort-ascdesc-item">
-              <a class="catalog__sort-ascdesc-link catalog__sort-ascdesc-link--desc" href="#"
-                 aria-label="Сортировка по возрастанию"></a>
+            <li class="catalog__sort-updown-item">
+              <input class="catalog__sort-updown-radiobutton visually-hidden" type="radio" name="updown" value="up"
+                     id="up">
+              <label class="catalog__sort-updown-label" for="up"><span class="visually-hidden">Сортировка по возрастанию</span></label>
             </li>
           </ul>
         </div>
@@ -169,7 +171,7 @@
               <img class="product-card__img" src="img/img-pink.jpg" width="360" height="576"
                    alt="PINK APP. Продуктовый лендинг приложения для iOS и Android">
               <!-- Всплывающий ценник -->
-              <div class="product-card__pricetag">
+              <div class="product-card__pricetag visually-hidden">
                 <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-link" href="#">PINK
                   APP</a></h3>
                 <p class="product-card__pricetag-plain-text text--grey">Продуктовый лендинг приложения для iOS и
@@ -186,7 +188,7 @@
               <img class="product-card__img" src="img/img-barbershop.jpg" width="360" height="576"
                    alt="BARBERSHOP. Сайт салоны красоты. Для мужчин, да.">
               <!-- Всплывающий ценник -->
-              <div class="product-card__pricetag">
+              <div class="product-card__pricetag visually-hidden">
                 <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-link" href="#">BARBERSHOP</a>
                 </h3>
                 <p class="product-card__pricetag-plain-text text--grey">Сайт салоны красоты. Для мужчин, да.</p>
@@ -202,7 +204,7 @@
               <img class="product-card__img" src="img/img-mishka.jpg" width="360" height="576"
                    alt="MISHKA. Интернет-магазин вязаных игрушек">
               <!-- Всплывающий ценник -->
-              <div class="product-card__pricetag">
+              <div class="product-card__pricetag visually-hidden">
                 <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-link"
                                                             href="#">MISHKA</a></h3>
                 <p class="product-card__pricetag-plain-text text--grey">Интернет-магазин вязаных игрушек</p>
@@ -218,7 +220,7 @@
               <img class="product-card__img" src="img/img-aplus.jpg" width="360" height="576"
                    alt="A PLUS. Лендинг курсов повышения квалификации">
               <!-- Всплывающий ценник -->
-              <div class="product-card__pricetag">
+              <div class="product-card__pricetag visually-hidden">
                 <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-link" href="#">A
                   PLUS</a></h3>
                 <p class="product-card__pricetag-plain-text text--grey">Лендинг курсов повышения квалификации</p>
@@ -234,7 +236,7 @@
               <img class="product-card__img" src="img/img-kvast.jpg" width="360" height="576"
                    alt="КВАСТ. Промо-сайт производителя крафтового кваса">
               <!-- Всплывающий ценник -->
-              <div class="product-card__pricetag">
+              <div class="product-card__pricetag visually-hidden">
                 <h3 class="product-card__pricetag-title"><a class="product-card__pricetag-link"
                                                             href="#">КВАСТ</a></h3>
                 <p class="product-card__pricetag-plain-text text--grey">Промо-сайт производителя крафтового кваса</p>
@@ -245,7 +247,6 @@
             </article>
           </li>
         </ul>
-        <!--<div class="paginator double--padding">-->
         <ul class="paginator__list">
           <li class="paginator__item"><a class="paginator__link link--current" href="#">1</a></li>
           <li class="paginator__item"><a class="paginator__link" href="#">2</a></li>
@@ -254,15 +255,11 @@
             <a class="paginator__link link--next" href="#">Следующая</a>
           </li>
         </ul>
-        <!--<div class="paginator__next">-->
-        <!--<a class="paginator__link" href="#"></a>-->
-        <!--</div>-->
-        <!--</div>-->
       </section>
     </div>
 
   </div>
-  <section class="contacts outline24">
+  <section class="contacts">
     <h2 class="visually-hidden">Как с нами связаться</h2>
     <div class="container container--contacts">
       <div class="contacts__requisites">
@@ -275,8 +272,6 @@
         <a class="button contacts__button button--red" href="#">Напишите нам</a>
       </div>
     </div>
-    <!--<img class="contacts_map" src="img/map.jpg" width="1440" height="416"-->
-    <!--alt="Адрес дизайн-студии 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">-->
   </section>
 </main>
 
