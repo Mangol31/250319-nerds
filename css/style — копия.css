@@ -1121,7 +1121,7 @@ input[type="radio"].visually-hidden {
   user-select: none;
   font-weight: 400;
   line-height: 1.25;
-  color: #4d4d4d;
+  color: #283136;
 }
 
 .filter-form__grid-item {
@@ -1138,40 +1138,30 @@ input[type="radio"].visually-hidden {
 .filter-form__grid-radiobutton + .filter-form__grid-label::before {
   position: absolute;
   content: "";
-  width: 26px;
-  height: 26px;
+  width: 25px;
+  height: 25px;
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   background-position: left center;
   top: -2px;
   left: -37px;
-  opacity: 0.4;
-}
-
-/*----!!!!----*/
-.filter-form__grid-radiobutton:not(:disabled) + .filter-form__grid-label:hover::before {
-  opacity: 0.1;
-}
-
-.filter-form__grid-radiobutton:disabled + .filter-form__grid-label {
-  opacity: 0.1;
 }
 
 .filter-form__grid-radiobutton:checked + .filter-form__grid-label::after {
   position: absolute;
   content: "";
-  width: 26px;
-  height: 26px;
+  width: 25px;
+  height: 25px;
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: left center;
   top: -2px;
   left: -37px;
-  opacity: 0.4;
 }
 
-.filter-form__grid-radiobutton:checked:hover + .filter-form__grid-label:hover::after {
-  opacity: 1;
+.filter__grid-label:disabled,
+.filter__features-label:disabled {
+  color: rgba(00, 00, 00, 0.3);
 }
 
 /*Особенности*/
@@ -1202,7 +1192,7 @@ input[type="radio"].visually-hidden {
   user-select: none;
   font-weight: 400;
   line-height: 1.25;
-  color: #4d4d4d;
+  color: #283136;
 }
 
 .filter-form__features-item {
@@ -1221,20 +1211,11 @@ input[type="radio"].visually-hidden {
   content: "";
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-off.svg");
+  background-image: url("../img/checkbox-off_my.svg");
   background-repeat: no-repeat;
   background-position: left center;
-  opacity: 0.4;
   top: -2px;
   left: -37px;
-}
-
-.filter-form__features-checkbox:hover + .filter-form__features-label:hover::before {
-  opacity: 1;
-}
-
-.filter-form__features-checkbox:disabled + .filter-form__features-label {
-  opacity: 0.1;
 }
 
 .filter-form__features-checkbox:checked + .filter-form__features-label::after {
@@ -1242,16 +1223,11 @@ input[type="radio"].visually-hidden {
   content: "";
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on.svg");
+  background-image: url("../img/checkbox-on_my.svg");
   background-repeat: no-repeat;
   background-position: left center;
   top: -2px;
   left: -37px;
-  opacity: 0.4;
-}
-
-.filter-form__features-checkbox:checked:hover + .filter-form__features-label:hover::after {
-  opacity: 1;
 }
 
 .filter-form__button {
@@ -1313,47 +1289,33 @@ input[type="radio"].visually-hidden {
   position: relative;
   cursor: pointer;
 }
-
 /*Вот где-то ниже косяк с переключателями сортировки*/
-.catalog__sort-updown-radiobutton--top + .catalog__sort-updown-label::before {
+.catalog__sort-updown-radiobutton + .catalog__sort-updown-label::before {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 5px 11px 5px;
-  border-color: transparent transparent #a6a6a6 transparent;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/icon-up-dir.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
   top: 0;
   left: 0;
-  opacity: 0.2;
 }
 
-.catalog__sort-updown-radiobutton--bottom + .catalog__sort-updown-label::before {
+.catalog__sort-updown-radiobutton:checked + .catalog__sort-updown-label::before {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 11px 5px 0 5px;
-  border-color: #a6a6a6 transparent transparent transparent;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
   top: 0;
   left: 0;
-  opacity: 0.2;
 }
 
-.catalog__sort-updown-radiobutton--top:checked + .catalog__sort-updown-label::before {
-  border-color: transparent transparent #231f20 transparent;
-  opacity: 1;
-}
-
-.catalog__sort-updown-radiobutton--bottom:checked + .catalog__sort-updown-label::before {
-  border-color: #231f20 transparent transparent transparent;
-  opacity: 1;
-}
-
-.catalog__sort-updown-radiobutton:not(:checked) + .catalog__sort-updown-label:hover::before {
-  opacity: 1;
-
+.catalog__sort-updown-radiobutton:not(:checked) + .catalog__sort-updown-label::before {
+  opacity: 0.3;
 }
 
 .catalog__sort-menu-link--active,
@@ -1412,7 +1374,7 @@ input[type="radio"].visually-hidden {
   width: 360px;
   height: 40px;
   position: absolute;
-  top: 1px;
+  top: 0;
   left: 0;
   background-image: url("../img/browser.svg");
   background-repeat: no-repeat;
@@ -1421,7 +1383,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product-card--selected::before {
-  opacity: 0.12;
+  opacity: 1;
 }
 
 .product-card__pricetag {
@@ -1439,12 +1401,6 @@ input[type="radio"].visually-hidden {
   padding-right: 60px;
   box-sizing: border-box;
   padding-top: 30px;
-  opacity: 0;
-}
-
-.product-card:hover .product-card__pricetag,
-.product-card:hover::before {
-  opacity: 1;
 }
 
 .product-card__pricetag-link {
