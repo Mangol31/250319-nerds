@@ -94,7 +94,7 @@
               <li class="filter-form__features-item">
                 <input class="filter-form__features-checkbox visually-hidden" type="checkbox" name="advantage"
                        id="advantage-feature"
-                       aria-label="Блок преимуществ">
+                       aria-label="Блок преимуществ" disabled>
                 <label class="filter-form__features-label" for="advantage-feature">Блок преимуществ</label>
               </li>
               <li class="filter-form__features-item">
@@ -137,12 +137,12 @@
           </ul>
           <ul class="catalog__sort-updown-list">
             <li class="catalog__sort-updown-item">
-              <input class="catalog__sort-updown-radiobutton catalog__sort-updown-radiobutton--bottom" type="radio" name="updown" value="down"
+              <input class="catalog__sort-updown-radiobutton catalog__sort-updown-radiobutton--bottom visually-hidden" type="radio" name="updown" value="down"
                      id="down" checked>
               <label class="catalog__sort-updown-label" for="down"><span class="visually-hidden">Сортировка по убыванию</span></label>
             </li>
             <li class="catalog__sort-updown-item">
-              <input class="catalog__sort-updown-radiobutton catalog__sort-updown-radiobutton--top" type="radio" name="updown" value="up"
+              <input class="catalog__sort-updown-radiobutton catalog__sort-updown-radiobutton--top visually-hidden" type="radio" name="updown" value="up"
                      id="up">
               <label class="catalog__sort-updown-label" for="up"><span class="visually-hidden">Сортировка по возрастанию</span></label>
             </li>
@@ -296,7 +296,7 @@
   </footer>
 </div>
 <!-- Модальное окно при нажатии кнопки "Напишите нам" -->
-<div class="modal-window-container visually-hidden">
+<div class="modal-window-container">
   <section class="modal-writeus">
     <header class="modal-writeus__header">
       <h2 class="modal-writeus__title">Напишите нам</h2>
