@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic');
 /*Основные стили */
-/*TODO Проставить потом марджинги и пэддинги = 0 для всех списков. Чтобы от глобального уйти*/
-/*Убрать везде аутлайны и настроить фокус*/
 
 * {
   padding: 0;
@@ -69,8 +67,7 @@ a {
 }
 
 /*Основные блоки и их модификаторы*/
-/*TODO В IE11 надпись у кнопок уезжает вверх. Разобраться*/
-/*TODO Надо сделать надписи тускнеющими при нажатии. забыл*/
+
 .button {
   display: inline-block;
   vertical-align: middle;
@@ -104,8 +101,6 @@ a {
   background-color: #d7373b;
   border-top: 3px solid #c13135;
   color: rgba(227, 115, 118, 0.3);
-  /*min-height: 47px;*/
-
 }
 
 .button--green {
@@ -172,18 +167,15 @@ a {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+  input[type="checkbox"].visually-hidden,
+  input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -303,22 +295,18 @@ input[type="radio"].visually-hidden {
   left: 8px;
   z-index: 1;
   border-radius: 50%;
-
   background: #ffffff;
 }
 
 .button--active:before {
   content: "";
-
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 2;
-
   width: 4px;
   height: 4px;
   margin: -4px;
-
   background-color: inherit;
   border: 2px solid #c1c1c1;
   border-radius: 50%;
@@ -498,7 +486,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-
 }
 
 .about-company__left-part {
@@ -648,19 +635,6 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-/*Крайние справа/слева лого партнеров позиционирую отдельно. Т.к. рисунки все разной ширины. Просто так в PP не попадешь*/
-/*.partner-logo__pict--left-logo {*/
-/*position: absolute;*/
-/*top: 15px;*/
-/*left: 30px;*/
-/*}*/
-
-/*.partner-logo__pict--right-logo {*/
-/*position: absolute;*/
-/*top: 4px;*/
-/*left: 64px;*/
-/*}*/
-
 .contacts {
   text-align: center;
   background-image: url("../img/map_new.jpg");
@@ -715,10 +689,6 @@ input[type="radio"].visually-hidden {
   width: 219px;
   margin-bottom: 47px;
   display: inline-block;
-}
-
-.contacts_map {
-
 }
 
 .footer {
@@ -831,6 +801,7 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   box-shadow: 0 0 40px rgba(00, 00, 00, 0.5);
   background-color: #ffffff;
+  z-index: 100;
 
 }
 
@@ -948,6 +919,9 @@ input[type="radio"].visually-hidden {
 
 .modal-writeus__submit-button {
   width: 260px;
+  outline: none;
+  border: none;
+  border-top: 3px solid #fb565a;
 }
 
 /*СТРАНИЦА КАТАЛОГА*/
@@ -1148,9 +1122,9 @@ input[type="radio"].visually-hidden {
   opacity: 0.4;
 }
 
-/*----!!!!----*/
+/*Сетка*/
 .filter-form__grid-radiobutton:not(:disabled) + .filter-form__grid-label:hover::before {
-  opacity: 0.1;
+  opacity: 1;
 }
 
 .filter-form__grid-radiobutton:disabled + .filter-form__grid-label {
@@ -1216,6 +1190,14 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
+.filter-form__features-checkbox:not(:disabled) + .filter-form__features-label:hover::before {
+  opacity: 1;
+}
+
+.filter-form__features-checkbox:disabled + .filter-form__features-label {
+  opacity: 0.1;
+}
+
 .filter-form__features-checkbox + .filter-form__features-label::before {
   position: absolute;
   content: "";
@@ -1227,14 +1209,6 @@ input[type="radio"].visually-hidden {
   opacity: 0.4;
   top: -2px;
   left: -37px;
-}
-
-.filter-form__features-checkbox:hover + .filter-form__features-label:hover::before {
-  opacity: 1;
-}
-
-.filter-form__features-checkbox:disabled + .filter-form__features-label {
-  opacity: 0.1;
 }
 
 .filter-form__features-checkbox:checked + .filter-form__features-label::after {
@@ -1323,8 +1297,8 @@ input[type="radio"].visually-hidden {
   border-style: solid;
   border-width: 0 5px 11px 5px;
   border-color: transparent transparent #a6a6a6 transparent;
-  top: 0;
-  left: 0;
+  top: -5px;
+  left: 6px;
   opacity: 0.2;
 }
 
@@ -1336,8 +1310,8 @@ input[type="radio"].visually-hidden {
   border-style: solid;
   border-width: 11px 5px 0 5px;
   border-color: #a6a6a6 transparent transparent transparent;
-  top: 0;
-  left: 0;
+  top: -4px;
+  left: -4px;
   opacity: 0.2;
 }
 
