@@ -183,17 +183,6 @@ input[type="radio"].visually-hidden {
 }
 
 /*Блоки сетки*/
-.outline22 { /*TODO Убрать потом*/
-  outline: 1px solid red;
-}
-
-.outline23 { /*TODO Убрать потом*/
-  outline: 1px solid blue;
-}
-
-.outline24 { /*TODO Убрать потом*/
-  outline: 1px solid green;
-}
 
 .main-header {
   background-color: #eeeeee;
@@ -697,7 +686,6 @@ input[type="radio"].visually-hidden {
   display: inline-block;
 }
 
-
 .footer {
   display: flex;
   flex-direction: row;
@@ -825,7 +813,6 @@ input[type="radio"].visually-hidden {
   font-size: 45px;
   line-height: 1;
   font-weight: 500;
-  /*margin-right: 440px;*/
 }
 
 .modal-close-button {
@@ -859,7 +846,6 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-writeus__form-internal-container {
-  /*width: 760px;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1125,6 +1111,7 @@ input[type="radio"].visually-hidden {
   left: -37px;
   opacity: 0.4;
 }
+
 /*Сетка*/
 .filter-form__grid-radiobutton:not(:disabled) + .filter-form__grid-label:hover::before {
   opacity: 1;
@@ -1291,7 +1278,6 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-/*Вот где-то ниже косяк с переключателями сортировки*/
 .catalog__sort-updown-radiobutton--top + .catalog__sort-updown-label::before {
   content: "";
   position: absolute;
