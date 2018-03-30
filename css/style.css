@@ -887,14 +887,14 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-form__text-area[placeholder] {
-text-indent: 15px;
+  text-indent: 15px;
 }
 
 .modal-writeus__label {
-line-height: 1.125;
-font-weight: 700;
-display: block;
-margin-bottom: 8px;
+  line-height: 1.125;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .modal-form__input-item:invalid {
