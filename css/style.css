@@ -169,13 +169,17 @@ a {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+
   white-space: nowrap;
+
   -webkit-clip-path: inset(100%);
+
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -535,7 +539,8 @@ input[type="radio"].visually-hidden {
 }
 
 .about-company__slogan {
-  width: 650px;
+  width: 750px;
+  padding-right: 20px;
   font-size: 45px;
   line-height: 1;
   font-weight: 500;
@@ -652,6 +657,8 @@ input[type="radio"].visually-hidden {
 }
 
 .partner-logo__item {
+  width: 260px;
+  margin-right: 40px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,15 +678,8 @@ input[type="radio"].visually-hidden {
   flex-basis: 25%;
 }
 
-.partner-logo__item:not(:last-child)::after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 2px;
-  height: 52px;
-  background-color: #eeeeee;
-  right: 0;
-  bottom: 21px;
+.partner-logo__item:last-child {
+  margin-right: 0;
 }
 
 .partner-logo__link {
