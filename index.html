@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Нёрдс: Учебный проект Голованов А.</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <header class="main-header">
@@ -187,7 +187,7 @@
   </footer>
 </div>
 <!-- Модальное окно при нажатии кнопки "Напишите нам" -->
-<div class="modal-window-container">
+<div class="modal-window-container visually-hidden">
   <section class="modal-writeus">
     <header class="modal-writeus__header">
       <h2 class="modal-writeus__title">Напишите нам</h2>
@@ -205,10 +205,11 @@
           <input class="modal-form__input-item" type="email" name="user-email" id="user-email"
                  placeholder="email@example.com" required aria-label="Поле ввода email">
         </p>
+      </div>
         <label class="modal-writeus__label" for="user-textarea">Текст письма: </label>
         <textarea class="modal-form__text-area" name="user-letter" id="user-textarea" placeholder="В свободной форме"
                   rows="3" cols="40" aria-label="Поле ввода текста письма"></textarea>
-      </div>
+
       <button class="button  modal-writeus__submit-button button--red" type="submit">
         Отправить
       </button>
