@@ -677,6 +677,16 @@ input[type="radio"].visually-hidden {
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
 }
+.partner-logo__item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 2px;
+  height: 52px;
+  background-color: #eeeeee;
+  right: -22px;
+  bottom: 22px;
+}
 
 .partner-logo__item:last-child {
   margin-right: 0;
